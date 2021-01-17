@@ -42,21 +42,13 @@ if (is_404()) {
 ?>
 
 
-<div class="page__header  block  block--hero">
-    <div class="block__media">
-        <?php echo $featured_image; ?>
-    </div>
 
-    <div class="block__content  alignwide">
-        <header class="block__header">
-            <h1 class="page__title  block__title">
-                <?php echo $title; ?>
-            </h1>
-        </header>
+<?php echo $featured_image; ?>
+  
+<?php echo $title; ?>
+           
+<?php echo $description; ?>
 
-        <?php echo $description; ?>
-    </div>
-</div>
 
 
 <?php if (have_posts()) : ?>

@@ -50,6 +50,9 @@ Wordpress Customizer Setting will override this because it's inline
   --font-size: 1.6rem;
   --font-size-ratio: 1.125;
   --line-height: 1.6;
+
+  --font-size-max: 1.6rem;
+  --font-size-breakpoint: 2vw;
 }
 
 /*--------------------------------------------------------------
