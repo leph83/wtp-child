@@ -7,6 +7,7 @@
 
  padding-top: var(--gutter);
  padding-bottom: var(--gutter);
+ margin-top: var(--gutter);
 }
 
 .footer__content {

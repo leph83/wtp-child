@@ -32,15 +32,15 @@
 }
 
 .nav--dropdown .nav__link {
-  color: var(--color-1);
-  background-color: var(--color-2);
+  color: var(--color-black);
+  background-color: var(--color-white);
   padding: calc(var(--gutter) / 2)  var(--gutter);
   margin-left: var(--gutter);
   white-space: nowrap;
 }
 
 .nav--dropdown .nav__item--active .nav__link {
-  color: var(--color-5);
+  color: var(--color-1);
 }
 
 .nav--dropdown > .nav__item > ul {
