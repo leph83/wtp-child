@@ -58,6 +58,7 @@ contains all "bigger" components which contain elements of the previous two cate
 @import "assets/css/theme/06-components/component.gutenberg.css";
 @import "assets/css/theme/06-components/component.blocks.css";
 
+@import "assets/css/theme/06-components/component.form.css";
 /*--------------------------------------------------------------
 # 07 UTILITIES
 e.g hacks or ie11 styles
