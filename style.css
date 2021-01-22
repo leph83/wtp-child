@@ -55,6 +55,7 @@ contains all "bigger" components which contain elements of the previous two cate
 
 @import "assets/css/theme/06-components/component.nav.css";
 
+@import "assets/css/theme/06-components/component.wordpress.css";
 @import "assets/css/theme/06-components/component.gutenberg.css";
 @import "assets/css/theme/06-components/component.blocks.css";
 
