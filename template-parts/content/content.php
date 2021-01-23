@@ -100,18 +100,26 @@ if (is_404()) {
 
 
 <?php if (is_singular()) : ?>
-    <div class="lc  lc--2  lc--padding">
+    <?php // pages and posts can have pagination - but not for archive etc. 
+    ?>
+    <?php wp_link_pages(array(
+        'before' => '<div class="lc  lc--3  lc--padding">',
+        'after' => '</div>',
+    )); ?>
 
-        <?php // pages and posts can have pagination - but not for archive etc. 
-        ?>
-        <?php wp_link_pages(); ?>
-
-        <?php if (is_single()) : ?>
+    <?php if (is_single()) : ?>
+        <div class="lc  lc--2  lc--padding  flex  flex-justify--space-between">
             <?php //show previous and next posts - but not for pages duh 
             ?>
-            <?php previous_post_link(); ?>
-            <?php next_post_link(); ?>
-        <?php endif; ?>
+            <div class="margin-right--auto">
+                <?php previous_post_link(); ?>
+            </div>
+
+            <div class="margin-left--auto">
+                <?php next_post_link(); ?>
+            </div>
+        </div>
+    <?php endif; ?>
 
     </div>
 <?php endif; ?>
