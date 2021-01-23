@@ -16,24 +16,32 @@
 
 /*--------------------------------------------------------------
 # EXCEPTIONS - FULL WIDTH
-  Cover
-  Image
+  
+  COVER
+  IMAGE
+  GROUP
 --------------------------------------------------------------*/
-
-.wp-block-cover:not(.alignwide):not(.alignfull),
-.wp-block-cover.alignwide .wp-block-cover__inner-container,
-.wp-block-cover.alignfull .wp-block-cover__inner-container {
+.wp-block-cover__inner-container,
+.wp-block-group__inner-container {
   max-width: var(--max-width-3);
+}
+
+.wp-block-group__inner-container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: var(--gutter);
 }
 
 /* WIDE */
 .wp-block-cover.alignwide,
-.wp-block-image.alignwide {
+.wp-block-image.alignwide,
+.wp-block-group.alignwide {
   width: 100%;
 }
 
 /* FULL */
 .wp-block-cover.alignfull,
-.wp-block-image.alignfull {
+.wp-block-image.alignfull,
+.wp-block-group.alignfull {
   width: 100%;
 }

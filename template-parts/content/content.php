@@ -95,12 +95,18 @@ if (is_404()) {
 
 
 <?php if (is_singular()) : ?>
-    <?php // pages and posts can have pagination - but not for archive etc. ?>
-    <?php wp_link_pages(); ?>
+    <div class="lc  lc--2  lc--padding">
 
-    <?php if (is_single()) : ?>
-        <?php //show previous and next posts - but not for pages duh ?>
-        <?php previous_post_link(); ?>
-        <?php next_post_link(); ?>
-    <?php endif; ?>
+        <?php // pages and posts can have pagination - but not for archive etc. 
+        ?>
+        <?php wp_link_pages(); ?>
+
+        <?php if (is_single()) : ?>
+            <?php //show previous and next posts - but not for pages duh 
+            ?>
+            <?php previous_post_link(); ?>
+            <?php next_post_link(); ?>
+        <?php endif; ?>
+
+    </div>
 <?php endif; ?>
