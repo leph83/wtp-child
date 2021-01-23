@@ -16,9 +16,9 @@ if (!defined('ABSPATH')) {
 
 <body <?php body_class('body'); ?>>
     <input id="burger" type="checkbox" class="burger__input">
-    <header id="header" class="header  burger__content  position--relative">
+    <header id="header" class="header  burger__content  ">
 
-        <div class="header__content  lc  lc--2  lc--padding">
+        <div class="header__content  lc  lc--2  lc--padding  position--relative">
 
             <div class="header__item">
                 <?php get_template_part('template-parts/header/site-branding'); ?>

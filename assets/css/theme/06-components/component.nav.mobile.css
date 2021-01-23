@@ -26,7 +26,8 @@
 }
 
 .nav--header .nav__link {
-  padding: var(--gutter) calc(var(--gutter) * 2);
+  padding: var(--gutter) calc(var(--gutter) * 1);
+  padding-left: 0;
 }
 
 .nav--header .nav__item--active,
@@ -35,7 +36,7 @@
 }
 
 .nav--header ul .nav__link {
-  padding-left: calc(var(--gutter) * 3);
+  padding-left: calc(var(--gutter) * 1);
   font-size: var(--font-size-8);
 }
 
