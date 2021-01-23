@@ -6,16 +6,18 @@ if (!defined('ABSPATH')) {
 
 </main>
 
-<footer id="footer" class="footer  bg-color--black  color--white">
-    <div class="lc lc--2 flex flex-wrap--wrap  flex-justify--space-between  flex-align-items--center">
-        <div class="padding">
+<footer id="footer" class="footer">
+    <section class="footer__content  lc lc--2">
+        <h2 class="screen-reader-text"><?php echo __('Footer', 'wtp-child'); ?></h2>
+
+        <div class="footer__item">
             &copy;<?php echo date('Y'); ?> - <?php echo get_bloginfo('name'); ?>
         </div>
 
-        <div class="padding-left--half  padding-right--half">
+        <div class="footer__item">
             <?php get_template_part('template-parts/footer/footer-nav'); ?>
         </div>
-    </div>
+    </section>
 </footer>
 
 <?php wp_footer(); ?>

@@ -15,15 +15,15 @@ if (!defined('ABSPATH')) {
 </head>
 
 <body <?php body_class('body'); ?>>
-    <header id="header" class=" bg-color--black  color--white  ">
+    <header id="header" class="header">
 
-        <div class="lc  lc--2  padding flex flex-wrap--wrap flex-justify--space-between  flex-align-items--center">
+        <div class="lc  lc--2  padding  header__content">
 
-            <div class="">
+            <div class="header__item">
                 <?php get_template_part('template-parts/header/site-branding'); ?>
             </div>
 
-            <section class="">
+            <section class="header__item">
                 <h2 class="screen-reader-text">Header</h2>
                 <?php get_template_part('template-parts/header/site-navigation'); ?>
             </section>
@@ -31,4 +31,4 @@ if (!defined('ABSPATH')) {
         </div>
     </header>
 
-    <main id="content" class="main  lc  lc--2  padding">
+    <main id="content" class="main">
