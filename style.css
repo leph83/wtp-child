@@ -59,8 +59,9 @@ contains all "bigger" components which contain elements of the previous two cate
 @import "assets/css/theme/06-components/component.footer.css";
 
 @import "assets/css/theme/06-components/component.nav.css";
-@import "assets/css/theme/06-components/component.nav.mobile.css" (max-width: 1049px);
-@import "assets/css/theme/06-components/component.nav.desktop.css" (min-width: 1050px);
+/* @import "assets/css/theme/06-components/component.nav.mobile.css" (max-width: 1049px); */
+@import "assets/css/theme/06-components/component.nav.mobile.css";
+/* @import "assets/css/theme/06-components/component.nav.desktop.css" (min-width: 1050px); */
 
 @import "assets/css/theme/06-components/component.wordpress.css";
 @import "assets/css/theme/06-components/component.gutenberg.css";

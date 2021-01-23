@@ -71,7 +71,7 @@ if (is_404()) {
 
 
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('entry-content  clearfix'); ?>>
 
     <?php echo $image; ?>
 

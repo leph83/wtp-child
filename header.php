@@ -18,7 +18,7 @@ if (!defined('ABSPATH')) {
     <input id="burger" type="checkbox" class="burger__input">
     <header id="header" class="header  burger__content  position--relative">
 
-        <div class="lc  lc--2  padding  header__content">
+        <div class="header__content  lc  lc--2  lc--padding">
 
             <div class="header__item">
                 <?php get_template_part('template-parts/header/site-branding'); ?>
