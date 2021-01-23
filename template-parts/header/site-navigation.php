@@ -7,7 +7,8 @@ if (!defined('ABSPATH')) {
 <label for="burger" class="burger__label">Menu</label>
 
 <?php
-$args = array(
+
+wp_nav_menu(array(
     'theme_location' => 'primary',
     'container'     => 'nav',
     'menu_class'    => 'nav  nav--dropdown  nav--header',
@@ -18,6 +19,5 @@ $args = array(
     'add_li_parent_class' => 'nav__item--parent',
     'add_a_class'   => 'nav__link',
     'add_a_active_class'   => 'nav__link--active',
-);
-wp_nav_menu($args);
+));
 ?>

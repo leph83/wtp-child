@@ -5,7 +5,7 @@ if (!defined('ABSPATH')) {
 ?>
 
 <?php
-$args = array(
+wp_nav_menu(array(
     'theme_location' => 'footer',
     'container'     => '',
     'menu_class'    => 'nav  nav--inline  nav--footer',
@@ -16,6 +16,5 @@ $args = array(
     'add_li_parent_class' => 'nav__item--parent',
     'add_a_class'   => 'nav__link',
     'add_a_active_class'   => 'nav__link--active',
-);
-wp_nav_menu($args);
+));
 ?>

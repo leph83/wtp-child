@@ -15,7 +15,7 @@ function wtp_load_styles_child()
         $css_version = filemtime(get_stylesheet_directory() . '/' . $file_name);
 
         // CHILD THEME  STYLE
-        wp_enqueue_style('wtp-theme', get_stylesheet_directory_uri() . '/' . $file_name, array('wtp-phucstrap'), $css_version);
+        wp_enqueue_style('wtp-child', get_stylesheet_directory_uri() . '/' . $file_name, array('wtp-phucstrap'), $css_version);
     }
     add_action('wp_enqueue_scripts', 'wtp_load_styles_child');
 }
