@@ -4,26 +4,14 @@
 .alignfull,
 .alignwide,
 .aligncontent,
-.entry-content > *:not(.alignwide):not(.alignfull) {
+.entry-content > * {
   margin-left: auto;
   margin-right: auto;
+  width: calc(100vw - var(--gutter) * 2);
 }
 
 .entry-content > *:not(.alignwide):not(.alignfull) {
   max-width: var(--max-width-3);
-  width: calc(100vw - var(--gutter) * 2);
-}
-
-.alignwide {
-  max-width: calc(var(--max-width-2) - var(--gutter) * 2);
-  width: calc(100vw - var(--gutter) * 2);
-}
-
-.alignfull {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: var(--max-width-1);
-  width: calc(100vw - var(--gutter) * 2);
 }
 
 /*--------------------------------------------------------------
