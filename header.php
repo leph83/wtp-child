@@ -23,9 +23,10 @@ if (!defined('ABSPATH')) {
                 <?php get_template_part('template-parts/header/site-branding'); ?>
             </div>
 
-            <div class="">
+            <section class="">
+                <h2 class="screen-reader-text">Header</h2>
                 <?php get_template_part('template-parts/header/site-navigation'); ?>
-            </div>
+            </section>
 
         </div>
     </header>

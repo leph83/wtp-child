@@ -50,9 +50,9 @@ if (!defined('ABSPATH')) {
             <?php $ping_count = count($comments_by_type['pings']); ?>
 
             <section class="comment">
-                <h3 class="comment__title">
+                <h2 class="comment__title">
                     <?php echo '<span class="comment__ping-count">' . esc_html($ping_count) . '</span> ' . esc_html(_nx('Trackback or Pingback', 'Trackbacks and Pingbacks', $ping_count, 'comments count', 'wtp-child')); ?>
-                </h3>
+                </h2>
 
                 <ul class="comment__list">
                     <?php wp_list_comments('type=pings&callback=wtp_custom_pings'); ?>

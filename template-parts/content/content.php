@@ -32,7 +32,6 @@ $categories = get_the_category_list(', ');
 
 // POSTS
 $postmeta = '';
-
 if (get_post_type() == 'post') {
     $postmeta .=
         '<div class="">'
@@ -49,7 +48,7 @@ if (get_post_type() == 'post') {
     }
 }
 
-// SINGULAR
+// Make title clickable if not page or post detail
 if (!is_singular()) {
     $title = '<a href="' . get_the_permalink() . '">' . get_the_title() . '</a>';
 }
@@ -58,12 +57,12 @@ if (!is_singular()) {
 if (is_home()) {
     // Blog not as Startpage
     if (get_option('page_for_posts') != 0) {
-        $id = get_post_thumbnail_id(get_option('page_for_posts'));
-        $image = wp_get_attachment_image($id, 'full');
+        $image_id = get_post_thumbnail_id(get_option('page_for_posts'));
+        $image = wp_get_attachment_image($image_id, 'full');
     }
 }
 
-// 404
+// 404 - set title for 404 Page
 if (is_404()) {
     $title = esc_html('404', 'wtp-child');
 }
@@ -82,23 +81,26 @@ if (is_404()) {
 
     <?php echo $postmeta; ?>
 
+
     <?php if (is_singular()) : ?>
         <?php the_content(); ?>
-
     <?php else : ?>
         <?php the_excerpt(); ?>
     <?php endif; ?>
 
+
+    <?php comments_template('', true); ?>
+
 </article>
 
-<?php comments_template('', true); ?>
 
 <?php if (is_singular()) : ?>
+    <?php // pages and posts can have pagination - but not for archive etc. ?>
     <?php wp_link_pages(); ?>
 
     <?php if (is_single()) : ?>
+        <?php //show previous and next posts - but not for pages duh ?>
         <?php previous_post_link(); ?>
         <?php next_post_link(); ?>
     <?php endif; ?>
 <?php endif; ?>
-
