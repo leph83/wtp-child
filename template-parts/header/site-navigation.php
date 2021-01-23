@@ -6,10 +6,11 @@ if (!defined('ABSPATH')) {
 
 <label for="burger" class="burger__label">Menu</label>
 
-<nav>
+<nav class="">
 <h2 class="screen-reader-text"><?php echo __('main navigation', 'wtp-child'); ?></h2>
 <?php
 wp_nav_menu(array(
+    'container' => false,
     'theme_location' => 'primary',
     'menu_class'    => 'nav  nav--dropdown  nav--header',
     'fallback_cb'   => false,

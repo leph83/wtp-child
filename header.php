@@ -15,7 +15,8 @@ if (!defined('ABSPATH')) {
 </head>
 
 <body <?php body_class('body'); ?>>
-    <header id="header" class="header">
+    <input id="burger" type="checkbox" class="burger__input">
+    <header id="header" class="header  burger__content  position--relative">
 
         <div class="lc  lc--2  padding  header__content">
 

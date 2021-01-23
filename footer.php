@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
 </main>
 
 <footer id="footer" class="footer">
-    <section class="footer__content  lc lc--2">
+    <section class="footer__content  lc lc--2  padding-left  padding-right">
         <h2 class="screen-reader-text"><?php echo __('Footer', 'wtp-child'); ?></h2>
 
         <div class="footer__item">

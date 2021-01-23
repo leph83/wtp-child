@@ -32,10 +32,4 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-
-    margin: 0 auto;
-    max-width: var(--max-width-2);
-
-    padding-left: var(--gutter);
-    padding-right: var(--gutter);
 }

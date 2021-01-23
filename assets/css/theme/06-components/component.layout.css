@@ -8,11 +8,6 @@
     min-height: 100vh;
 }
 
-.main--container {
+.main {
     flex-grow: 1;
-}
-
-.wp-post-image {
-    margin-left: auto;
-    margin-right: auto;
 }
