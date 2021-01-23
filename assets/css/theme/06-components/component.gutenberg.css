@@ -42,8 +42,9 @@
 /*--------------------------------------------------------------
 # ELEMENTS WITH BACKGROUND COLOR
 --------------------------------------------------------------*/
-.entry-content .has-background {
-  padding: var(--gutter);
+.entry-content .has-background:not(.wp-block-media-text) {
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
 }
 
 /*--------------------------------------------------------------
