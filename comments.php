@@ -19,9 +19,9 @@ if (!defined('ABSPATH')) {
         <?php if (!empty($comments_by_type['comment'])) : ?>
 
             <section class="comment">
-                <h3 class="comment__title">
+                <h2 class="comment__title">
                     <?php comments_number(); ?>
-                </h3>
+                </h2>
 
                 <?php if (get_comment_pages_count() > 1) : ?>
                     <nav class="comment__navigation">
