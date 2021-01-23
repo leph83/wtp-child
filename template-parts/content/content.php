@@ -71,23 +71,28 @@ if (is_404()) {
 
 
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('entry-content  clearfix'); ?>>
-
-    <?php echo $image; ?>
-
-    <h1>
-        <?php echo $title; ?>
-    </h1>
-
-    <?php echo $postmeta; ?>
+<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?>>
 
 
-    <?php if (is_singular()) : ?>
-        <?php the_content(); ?>
-    <?php else : ?>
-        <?php the_excerpt(); ?>
-    <?php endif; ?>
 
+    <div class="lc  lc--3  lc--padding">
+        <?php echo $image; ?>
+
+        <h1>
+            <?php echo $title; ?>
+        </h1>
+
+        <?php echo $postmeta; ?>
+    </div>
+
+
+    <div class="entry-content  clearfix">
+        <?php if (is_singular()) : ?>
+            <?php the_content(); ?>
+        <?php else : ?>
+            <?php the_excerpt(); ?>
+        <?php endif; ?>
+    </div>
 
     <?php comments_template('', true); ?>
 

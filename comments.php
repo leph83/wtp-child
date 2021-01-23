@@ -6,10 +6,9 @@ if (!defined('ABSPATH')) {
 ?>
 
 
-<?php if (have_comments() &&  !post_password_required() ) : ?>
-    <?php wp_enqueue_script( "comment-reply" ); ?>
+<?php if (have_comments() &&  !post_password_required()) : ?>
 
-    <div class="comments">
+    <div class="comments  lc  lc--3  lc--padding">
 
         <?php
         global $comments_by_type;
@@ -63,6 +62,8 @@ if (!defined('ABSPATH')) {
 
     </div>
 
+    <?php wp_enqueue_script("comment-reply"); ?>
+
 <?php endif; ?>
 
 
@@ -70,7 +71,8 @@ if (!defined('ABSPATH')) {
 
 
 <?php if (comments_open()) : ?>
-
-    <?php comment_form(); ?>
+    <div class="comments  lc  lc--3  lc--padding">
+        <?php comment_form(); ?>
+    </div>
 
 <?php endif; ?>

@@ -33,12 +33,17 @@
 .wp-block-group__inner-container {
   margin-left: auto;
   margin-right: auto;
-  padding-left: var(--gutter);
-  padding-right: var(--gutter);
 
   /* margin collapse fix */
   display: flex;
   flex-direction: column;
+}
+
+/*--------------------------------------------------------------
+# ELEMENTS WITH BACKGROUND COLOR
+--------------------------------------------------------------*/
+.entry-content .has-background {
+  padding: var(--gutter);
 }
 
 /*--------------------------------------------------------------
@@ -62,10 +67,34 @@
 
 .wp-block-media-text .wp-block-media-text__content {
   padding: 0 var(--gutter);
-
 }
 
 /* nobody might recognize this */
 .wp-block-media-text:not(.has-background) .wp-block-media-text__content {
   /* padding-right: 0; */
 }  
+
+/*--------------------------------------------------------------
+# FLOATED ELEMENTS FIX
+--------------------------------------------------------------*/
+.entry-content > .alignleft {
+  margin-left: calc(50vw - var(--max-width-3) / 2);
+}
+
+.entry-content > .alignright {
+  margin-right: calc(50vw - var(--max-width-3) / 2);
+}
+
+.wp-block-image .alignleft,
+.wp-block-image .alignright {
+  margin-top: 0;
+  margin-bottom: var(--gutter);
+}
+
+.wp-block-image .alignleft {
+  margin-right: var(--gutter);
+}
+
+.wp-block-image .alignright {
+  margin-left: var(--gutter);
+}
