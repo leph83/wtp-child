@@ -1,6 +1,5 @@
 /*--------------------------------------------------------------
 # GUTTER
-TODO: Add to Customizer
 --------------------------------------------------------------*/
 :root {
   --gutter: 2.4rem;
@@ -73,6 +72,6 @@ Wordpress Customizer Setting will override this because it's inline
 --------------------------------------------------------------*/
 :root {
   /* Font Family */
-  --font-family: sans-serif;
-  --font-family-2: serif;
+  --font-family: 'Poppins', sans-serif;
+  --font-family-2: 'Hind', sans-serif;
 }
