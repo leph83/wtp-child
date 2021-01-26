@@ -25,7 +25,6 @@ if (!defined('ABSPATH')) {
             </div>
 
             <div class="header__item">
-                <h2 class="screen-reader-text">Header</h2>
                 <?php get_template_part('template-parts/header/site-navigation'); ?>
             </div>
 
