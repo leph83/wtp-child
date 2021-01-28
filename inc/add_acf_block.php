@@ -5,7 +5,7 @@ if (!defined('ABSPATH')) {
 
 $path = 'template-parts/blocks/';
 
-add_action('acf/init', 'my_acf_blocks_init');
+add_action('acf/init', 'wtp_acf_blocks_init');
 
 if (!function_exists('wtp_acf_blocks_init') && function_exists('acf_register_block_type')) {
     function wtp_acf_blocks_init()
