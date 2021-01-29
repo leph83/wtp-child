@@ -1,6 +1,5 @@
 /*--------------------------------------------------------------
 # GUTTER
-TODO: Add to Customizer
 --------------------------------------------------------------*/
 :root {
   --gutter: 2.4rem;
@@ -39,12 +38,11 @@ Wordpress Customizer Setting will override this because it's inline
 --------------------------------------------------------------*/
 :root {
   /* Modular Scale */
-  --font-size: 1.6rem;
-  --font-size-ratio: 1.125;
-  --line-height: 1.6;
-
-  --font-size-max: 1.6rem;
-  --font-size-breakpoint: 2vw;
+  --fontsize-min: 1.6;
+  --fontsize-max: 3.2;
+  --fontsize-minwidth: 100;
+  --fontsize-maxwidth: 200;
+  --fontsize-ratio: 1.125;
 }
 
 /*--------------------------------------------------------------
@@ -74,6 +72,6 @@ Wordpress Customizer Setting will override this because it's inline
 --------------------------------------------------------------*/
 :root {
   /* Font Family */
-  --font-family: sans-serif;
-  --font-family-2: serif;
+  --font-family: 'Poppins', sans-serif;
+  --font-family-2: 'Hind', sans-serif;
 }

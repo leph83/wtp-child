@@ -9,12 +9,3 @@
   padding-bottom: var(--gutter);
   margin-top: var(--gutter);
 }
-
-.footer__content {
-  max-width: var(--max-width-2);
-  margin-left: auto;
-  margin-right: auto;
-
-  padding-left: var(--gutter);
-  padding-right: var(--gutter);
-}

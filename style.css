@@ -1,12 +1,17 @@
 /*
 Theme Name:     WTP Child
-Text Domain:    whothephuc
-Version:        2020.1
-Description:    Child Theme
-Template:       wtp-theme
-Tags: 
+Theme URI:      http://what-the-phuc.com
 Author:         Phuc Le
-Author URI:     http://what-the-phuc.com
+Author URI:     http://phuc.at
+Description:    a Child Theme
+Requires at least: 5.6
+Tested up to:   5.6
+Requires PHP:   7
+Version:        2021.1
+License:        GNU General Public License v2 or later
+License URI:    http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:    wtp-theme
+Template:       wtp
 */
 
 /*--------------------------------------------------------------
@@ -54,10 +59,15 @@ contains all "bigger" components which contain elements of the previous two cate
 @import "assets/css/theme/06-components/component.footer.css";
 
 @import "assets/css/theme/06-components/component.nav.css";
+/* @import "assets/css/theme/06-components/component.nav.mobile.css" (max-width: 1049px); */
+@import "assets/css/theme/06-components/component.nav.mobile.css";
+/* @import "assets/css/theme/06-components/component.nav.desktop.css" (min-width: 1050px); */
 
+@import "assets/css/theme/06-components/component.wordpress.css";
 @import "assets/css/theme/06-components/component.gutenberg.css";
 @import "assets/css/theme/06-components/component.blocks.css";
 
+@import "assets/css/theme/06-components/component.form.css";
 /*--------------------------------------------------------------
 # 07 UTILITIES
 e.g hacks or ie11 styles

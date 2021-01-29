@@ -67,7 +67,7 @@ if (!function_exists('wtp_register_block_style')) {
 			'core/spacer',
 			array(
 				'name'  => 'default',
-				'label' => esc_html__('Default', 'wtp'),
+				'label' => esc_html__('Default', 'wtp-child'),
 			)
 		);
 	}

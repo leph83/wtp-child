@@ -14,43 +14,8 @@
   color: inherit;
 }
 
-.burger__label {
+.burger__input {
   display: none;
-}
-
-/*--------------------------------------------------------------
-# NAV PRIMARY - Usually Header
---------------------------------------------------------------*/
-.nav--dropdown {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: calc(var(--gutter) * -1);
-}
-
-.nav--dropdown .nav__item {
-  position: relative;
-}
-
-.nav--dropdown .nav__link {
-  color: var(--color-black);
-  background-color: var(--color-white);
-  padding: calc(var(--gutter) / 2)  var(--gutter);
-  margin-left: var(--gutter);
-  white-space: nowrap;
-}
-
-.nav--dropdown .nav__item--active .nav__link {
-  color: var(--color-1);
-}
-
-.nav--dropdown > .nav__item > ul {
-  display: none;
-  position: absolute;
-}
-
-.nav--dropdown .nav__item:hover > ul,
-.nav--dropdown .nav__item:focus-within > ul {
-  display: block;
 }
 
 /*--------------------------------------------------------------
@@ -64,7 +29,6 @@
 .nav--inline .nav__item {
   margin-left: var(--gutter);
 }
-
 
 /*--------------------------------------------------------------
 # NAV PAGINATION

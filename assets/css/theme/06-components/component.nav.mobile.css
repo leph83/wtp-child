@@ -1,11 +1,45 @@
 /*--------------------------------------------------------------
-# MOBILE NAV
+# MOBILE NAV BURGER
 --------------------------------------------------------------*/
 .burger__label {
-    display: block;
+  display: block;
 }
 
 .burger__input:checked ~ .burger__content .nav {
-    display: flex;
-  }
-  
+  display: block;
+}
+
+/*--------------------------------------------------------------
+  # MOBILE NAV
+  --------------------------------------------------------------*/
+.nav--header {
+  display: none;
+  position: absolute;
+  z-index: 10000;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.nav--header .nav__link {
+  padding: var(--gutter) calc(var(--gutter) * 1);
+  padding-left: 0;
+}
+
+.nav--header .nav__item--active,
+.nav--header .current-menu-parent > .nav__link {
+  color: var(--color-2);
+}
+
+.nav--header ul .nav__link {
+  padding-left: calc(var(--gutter) * 1);
+  font-size: var(--font-size-8);
+}
+
+.nav--header .wpml-ls-item {
+  display: inline-block;
+}

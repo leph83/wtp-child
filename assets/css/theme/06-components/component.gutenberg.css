@@ -1,252 +1,132 @@
 /*--------------------------------------------------------------
-# WORDPRESS DEFAULT BREAK POINTS
-
-@media (min-width: 480px) {}
-@media (min-width: 600px) {}
-@media (min-width: 782px) {}
-@media (min-width: 960px) {}
-@media (min-width: 1280px) {}
-@media (min-width: 1440px) {}
+# CONTENT WIDTH GUTENBERG BLOCKS - DEFAULT SETTING
 --------------------------------------------------------------*/
-
-.post-thumbnail,
-.entry-content .wp-audio-shortcode,
-.entry-content
-  > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.woocommerce),
-*[class*="inner-container"]
-  > *:not(.entry-content):not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.woocommerce),
-.aligncontent {
+.alignfull,
+.alignwide,
+.aligncontent,
+.entry-content > * {
   margin-left: auto;
   margin-right: auto;
+  width: calc(100vw - var(--gutter) * 4);
+}
+
+.entry-content > *:not(.alignwide):not(.alignfull) {
   max-width: var(--max-width-3);
 }
 
-.alignwide {
+/*--------------------------------------------------------------
+# EXCEPTIONS - FULL WIDTH
+  
+  COVER
+  IMAGE
+  GROUP
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# INNER CONTAINER WIDTH
+--------------------------------------------------------------*/
+.wp-block-cover > .wp-block-cover__inner-container,
+.wp-block-group > .wp-block-group__inner-container,
+.blocks-gallery-caption {
+  max-width: var(--max-width-3);
+}
+
+.wp-block-group__inner-container {
   margin-left: auto;
   margin-right: auto;
-  max-width: var(--max-width-2);
 }
 
-.alignfull {
-  max-width: var(--max-width-1);
+.wp-block-group__inner-container {
+  /* margin collapse fix */
+  overflow: auto;
+}
+
+/* like, who does this? */
+.alignwide.wp-block-gallery > figcaption,
+.alignfull.wp-block-gallery > figcaption {
   margin-left: auto;
   margin-right: auto;
+  width: calc(100vw - var(--gutter) * 4);
 }
 
 /*--------------------------------------------------------------
-# Content Width padding and fixes
+# ELEMENTS WITH BACKGROUND COLOR
 --------------------------------------------------------------*/
-
-.entry-content > *,
-.wp-block-template-part > *,
-.alignwide,
-.aligncontent {
-  padding-left: var(--gutter);
-  padding-right: var(--gutter);
-}
-
-.entry-content > table,
-.entry-content > .wp-block-table,
-.entry-content > pre {
-  width: calc(var(--max-width-3) - var(--gutter) * 2);
-}
-
-/*--------------------------------------------------------------
-# VERTICAL SPACING IN GUTENBERG
---------------------------------------------------------------*/
-.entry-content > *,
-[class*="inner-container"] > *,
-.wp-block-template-part > *,
-.wp-block-columns .wp-block-column > *  {
-  margin-top: calc(1 * var(--gutter));
-  margin-bottom: calc(1 * var(--gutter));
-}
-
-.entry-content > *:first-child,
-[class*="inner-container"] > *:first-child,
-.wp-block-template-part > *:first-child,
-.wp-block-columns .wp-block-column > *:first-child {
-  margin-top: 0;
-}
-
-.entry-content > *:last-child,
-[class*="inner-container"] > *:last-child,
-.wp-block-template-part > *:last-child,
-.wp-block-columns .wp-block-column > *:last-child {
-  margin-bottom: 0;
-}
-
-.alignfull {
-  padding-left: initial;
-  padding-right: initial;
-}
-
-/*--------------------------------------------------------------
-# TESTING CUSTOM GUTENBERG STYLES
---------------------------------------------------------------*/
-
-/* GROUPS WITH BACKGROUND */
-.wp-block-group.has-background {
-  padding-left: initial;
-  padding-right: initial;
-}
-
-.wp-block-group.has-background {
-  padding: calc(var(--gutter) / 3 * 2) var(--gutter);
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-/* LISTS 
-  keep this order
-*/
-.entry-content ol,
-.entry-content ul,
-.entry-content dd {
-  padding-left: calc(var(--gutter) * 1);
-}
-
-.entry-content > ol,
-.entry-content > ul,
-.entry-content > dd {
+.entry-content .has-background:not(.wp-block-media-text) {
   padding-left: calc(var(--gutter) * 2);
-}
-
-
-
-/* QUOTES */
-.wp-block-quote::before {
-  content: "";
-  width: 3px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: var(--gutter);
-  height: 100%;
-  background-color: var(--color-1);
+  padding-right: calc(var(--gutter) * 2);
 }
 
 /*--------------------------------------------------------------
-# GALLERY UL FIX
+# FULL WIDTH
 --------------------------------------------------------------*/
-.entry-content figure ul {
-  margin: 0;
+
+/* WIDE */
+.wp-block-cover.alignwide,
+.wp-block-image.alignwide,
+.wp-block-group.alignwide {
+  width: 100%;
+}
+
+/* FULL */
+.wp-block-cover.alignfull,
+.wp-block-image.alignfull,
+.wp-block-group.alignfull {
+  width: 100%;
+}
+
+/*--------------------------------------------------------------
+# MEDIA TEXT FIX
+--------------------------------------------------------------*/
+.wp-block-media-text .wp-block-media-text__content {
   padding: 0;
 }
 
-.entry-content figure.alignleft {
-  padding-left: calc(var(--gutter) / 2);
-  padding-right: 0;
+.wp-block-media-text {
+  display: grid;
+  grid-gap: calc(var(--gutter) * 2); 
 }
 
-.entry-content figure.alignright {
-  padding-right: calc(var(--gutter) / 2);
-  padding-left: 0;
+@media (min-width: 600px) {
+  .wp-block-media-text {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
-.wp-block-latest-posts.is-grid {
-  padding-left: var(--gutter);
-}
-
-.wp-block-latest-posts.is-grid li {
-  margin: 0 var(--gutter) var(--gutter) 0;
-}
-
-.wp-block-latest-posts.is-grid a {
-  text-decoration: none;
-  color: inherit;
-  font-weight: bold;
-  font-size: var(--font-size-7);
-}
-
-/*--------------------------------------------------------------
-# TESTING CUSTOM GUTENBERG STYLES
---------------------------------------------------------------*/
-blockquote > p::before,
-blockquote > p::after,
-.wp-block-quote > p::before,
-.wp-block-quote > p::after {
-  content: '"';
-}
-
-.wp-block-quote::before {
-  content: initial;
-}
-
-/* .wp-block-quote {
-  border-left: none;
-  position: relative;
-  padding-left: 3em;
-} */
-
-/*--------------------------------------------------------------
-# TABLE
---------------------------------------------------------------*/
-
-/* padding doesn't applay to this if collapse, don't have fix, don't care */
-.entry-content > table,
-.entry-content > .wp-block-table {
-  border-collapse: collapse;
-}
-
-table td,
-table th,
-.wp-block-table td,
-.wp-block-table th {
-  border: 1px solid;
-  padding: calc(var(--gutter) / 2);
-}
 
 
 /*--------------------------------------------------------------
-#   STUPID FLOAT FIXES
-    I actually don't like floating stuff
+# FLOATED ELEMENTS FIX
 --------------------------------------------------------------*/
-
-.alignleft {
-  float: left;
-  margin-right: var(--gutter);
-  margin-bottom: var(--gutter);
-}
-
 .entry-content > .alignleft {
   margin-left: calc(50vw - var(--max-width-3) / 2);
-}
-
-.alignright {
-  float: right;
-  margin-left: var(--gutter);
-  margin-bottom: var(--gutter);
 }
 
 .entry-content > .alignright {
   margin-right: calc(50vw - var(--max-width-3) / 2);
 }
 
-/* because stupid wordpress adds a width to these elements and I add a padding */
-.entry-content figure.alignleft,
-.entry-content figure.alignright {
-  box-sizing: content-box;
-  margin-top: initial;
+.entry-content .alignleft,
+.entry-content .alignright {
+  margin-top: 0;
+  margin-bottom: var(--gutter);
+  width: auto;
 }
 
-/* CLEARFIX */
-.entry-content::after {
-  content: "";
-  display: table;
-  table-layout: fixed;
-  clear: both;
+.entry-content .alignleft {
+  margin-right: var(--gutter);
 }
 
-.clearfix::before,
-.clearfix::after {
-  content: " ";
-  display: table;
-} 
-
-.clearfix::after {
-  clear: both;
+.entry-content .alignright {
+  margin-left: var(--gutter);
 }
 
 
+.wp-block-cover, .wp-block-cover-image {
+    padding: 0;
+}
 
+.wp-block-cover .wp-block-cover__inner-container {
+    width: calc(100vw - var(--gutter) * 2);
+    max-width: var(--max-width-3);
+}

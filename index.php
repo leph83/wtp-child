@@ -5,20 +5,17 @@ if (!defined('ABSPATH')) {
 
 get_header();
 
-// DEFAULT
-$title = single_post_title('', false);
-$description = '';
-$featured_image = get_the_post_thumbnail();
+$title = '';
 
-// BLOG PAGE
-if (is_home()) {
-    $featured_image = '';
-
-    // Blog not as Startpage
-    if (get_option('page_for_posts') != 0) {
-        $id = get_post_thumbnail_id(get_option('page_for_posts'));
-        $featured_image = wp_get_attachment_image($id, 'full');
+// SEARCH
+if (is_search()) {
+    // can't deal with _n for now
+    $title = (int) $wp_query->found_posts . ' ' . __('results for', 'wtp-child');
+    if ((int) $wp_query->found_posts == 1) {
+        $title = (int) $wp_query->found_posts . ' ' . __('result for', 'wtp-child');
     }
+
+    $title = $title . ' <span>"' . esc_html(get_search_query()) . '"</span>';
 }
 
 // ARCHIVE
@@ -27,61 +24,42 @@ if (is_archive()) {
     $description = get_the_archive_description();
 }
 
-// SEARCH
-if (is_search()) {
-    $title = _n(
-        'We found ' . (int) $wp_query->found_posts . ' result for',
-        'We found ' . (int) $wp_query->found_posts . ' results for',
-        'wtp'
-    ) . ' <span>"' . esc_html(get_search_query()) . '"</span>';
-
-    $description = get_search_form(false);
+if (is_home()) {
+    if (get_option('page_for_posts') != 0) {
+        $id = get_option('page_for_posts');
+        $title = get_the_title($id);
+    }
 }
 
-// 404
-if (is_404()) {
-    $title = esc_html('404', 'wtp');
-}
 
+// HTML 5 MARKUP
+$section_tag = 'section';
+if (is_singular()) {
+    $section_tag = 'div';
+}
 
 ?>
+<<?php echo $section_tag; ?>>
+
+    <?php if ($title) : ?>
+        <h2 class="lc  lc--2  padding-left padding-right"><?php echo $title; ?></h2>
+    <?php endif; ?>
 
 
-<div class="page__header  block  block--hero">
-    <div class="block__media">
-        <?php echo $featured_image; ?>
-    </div>
+    <?php if (have_posts()) : ?>
 
-    <div class="block__content  alignwide">
-        <header class="block__header">
-            <h1 class="page__title  block__title">
-                <?php echo $title; ?>
-            </h1>
-        </header>
+        <?php while (have_posts()) : the_post(); ?>
 
-        <?php echo $description; ?>
-    </div>
-</div>
+            <?php get_template_part('template-parts/content/content', 'content'); ?>
 
+        <?php endwhile; ?>
 
-<?php if (have_posts()) : ?>
+        <?php the_posts_navigation(); ?>
 
-    <?php while (have_posts()) : the_post(); ?>
+    <?php else : ?>
+        <?php get_template_part('template-parts/content/content', 'none'); ?>
+    <?php endif; ?>
 
-        <?php get_template_part('template-parts/content/content', 'overview'); ?>
-
-    <?php endwhile; ?>
-
-    <?php 
-        $args = array(
-            'class' => 'alignwide',
-        );
-        the_posts_navigation($args); 
-    ?>
-
-<?php else : ?>
-    <?php get_template_part('template-parts/content/content', 'none'); ?>
-<?php endif; ?>
-
+</<?php echo $section_tag; ?>>
 
 <?php get_footer();
