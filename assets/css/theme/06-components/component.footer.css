@@ -2,16 +2,19 @@
 # FOOTER
 --------------------------------------------------------------*/
 .footer {
- background-color: var(--color-black);
- color: var(--color-white);
+  background-color: var(--color-black);
+  color: var(--color-white);
 
- padding-top: var(--gutter);
- padding-bottom: var(--gutter);
- margin-top: var(--gutter);
+  padding-top: var(--gutter);
+  padding-bottom: var(--gutter);
+  margin-top: var(--gutter);
 }
 
 .footer__content {
-    max-width: var(--max-width-2);
-    margin-left: auto;
-    margin-right: auto;
+  max-width: var(--max-width-2);
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
 }
