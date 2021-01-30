@@ -4,10 +4,12 @@
 .alignfull,
 .alignwide,
 .aligncontent,
-.entry-content > * {
+.entry-content > *,
+.alignwide.wp-block-gallery > figcaption,
+.alignfull.wp-block-gallery > figcaption {
   margin-left: auto;
   margin-right: auto;
-  width: calc(100vw - var(--gutter) * 4);
+  width: calc(100vw - var(--gutter) * 2);
 }
 
 .entry-content > *:not(.alignwide):not(.alignfull) {
@@ -39,14 +41,6 @@
 .wp-block-group__inner-container {
   /* margin collapse fix */
   overflow: auto;
-}
-
-/* like, who does this? */
-.alignwide.wp-block-gallery > figcaption,
-.alignfull.wp-block-gallery > figcaption {
-  margin-left: auto;
-  margin-right: auto;
-  width: calc(100vw - var(--gutter) * 4);
 }
 
 /*--------------------------------------------------------------
@@ -84,7 +78,7 @@
 
 .wp-block-media-text {
   display: grid;
-  grid-gap: calc(var(--gutter) * 2); 
+  grid-gap: calc(var(--gutter) * 1);
 }
 
 @media (min-width: 600px) {
@@ -92,8 +86,6 @@
     grid-template-columns: 1fr 1fr;
   }
 }
-
-
 
 /*--------------------------------------------------------------
 # FLOATED ELEMENTS FIX
@@ -121,12 +113,12 @@
   margin-left: var(--gutter);
 }
 
-
-.wp-block-cover, .wp-block-cover-image {
-    padding: 0;
+.wp-block-cover,
+.wp-block-cover-image {
+  padding: 0;
 }
 
-.wp-block-cover .wp-block-cover__inner-container {
-    width: calc(100vw - var(--gutter) * 2);
-    max-width: var(--max-width-3);
+.wp-block-cover > .wp-block-cover__inner-container {
+  width: calc(100vw - var(--gutter) * 2);
+  max-width: var(--max-width-3);
 }

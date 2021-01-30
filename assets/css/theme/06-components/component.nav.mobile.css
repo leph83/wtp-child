@@ -3,6 +3,7 @@
 --------------------------------------------------------------*/
 .burger__label {
   display: block;
+  cursor: pointer;
 }
 
 .burger__input:checked ~ .burger__content .nav {

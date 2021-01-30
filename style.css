@@ -10,7 +10,7 @@ Requires PHP:   7
 Version:        2021.1
 License:        GNU General Public License v2 or later
 License URI:    http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain:    wtp-theme
+Text Domain:    wtp-child
 Template:       wtp
 */
 
@@ -59,9 +59,8 @@ contains all "bigger" components which contain elements of the previous two cate
 @import "assets/css/theme/06-components/component.footer.css";
 
 @import "assets/css/theme/06-components/component.nav.css";
-/* @import "assets/css/theme/06-components/component.nav.mobile.css" (max-width: 1049px); */
-@import "assets/css/theme/06-components/component.nav.mobile.css";
-/* @import "assets/css/theme/06-components/component.nav.desktop.css" (min-width: 1050px); */
+@import "assets/css/theme/06-components/component.nav.mobile.css" (max-width: 1049px);
+@import "assets/css/theme/06-components/component.nav.desktop.css" (min-width: 1050px);
 
 @import "assets/css/theme/06-components/component.wordpress.css";
 @import "assets/css/theme/06-components/component.gutenberg.css";
