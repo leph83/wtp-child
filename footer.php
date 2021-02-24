@@ -4,6 +4,16 @@ if (!defined('ABSPATH')) {
 }
 ?>
 
+<?php if (is_active_sidebar('sidebar-1')) : ?>
+    <aside class="footer__top">
+        <div class="footer__topcontent">
+            <ul class="widget">
+                <?php dynamic_sidebar('sidebar-1'); ?>
+            </ul>
+        </div>
+    </aside>
+<?php endif; ?>
+
 </main>
 
 <footer id="footer" class="footer">

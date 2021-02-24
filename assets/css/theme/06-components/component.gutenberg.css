@@ -15,6 +15,29 @@
 }
 
 /*--------------------------------------------------------------
+# VERTICAL RHYTHM
+--------------------------------------------------------------*/
+/* .entry-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+} */
+
+.entry-content * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.entry-content * + * {
+  margin-top: var(--gutter);
+}
+
+/* exceptions */
+.entry-content li {
+  margin-top: 0;
+}
+
+/*--------------------------------------------------------------
 # EXCEPTIONS - FULL WIDTH
   
   COVER

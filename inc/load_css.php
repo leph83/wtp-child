@@ -4,18 +4,36 @@ if (!defined('ABSPATH')) {
 }
 
 if (!function_exists('wtp_load_styles_child')) {
-function wtp_load_styles_child()
+    function wtp_load_styles_child()
     {
-        // Version dependend on change date of file
-        $file_name = 'style.css';
-        if (file_exists( get_stylesheet_directory() . '/style.min.css')) {
-            $file_name = 'style.min.css';
+        $css_path = '/assets/css/theme/';
+
+        $css_files = array(
+            '01-settings/setting.fonts.css',
+            '01-settings/setting.variables.css',
+
+            '06-components/component.layout.css',
+            '06-components/component.header.css',
+            '06-components/component.footer.css',
+
+            '06-components/component.nav.css',
+            '06-components/component.nav.mobile.css',
+            '06-components/component.nav.desktop.css',
+
+            '06-components/component.wordpress.css',
+            '06-components/component.gutenberg.css',
+            '06-components/component.blocks.css',
+            '06-components/component.form.css',
+        );
+
+        // STYLES
+        $css_id = 0;
+        foreach ($css_files as $css_file) {
+            $css_version = filemtime(get_stylesheet_directory() . $css_path . $css_file);
+
+            wp_enqueue_style('wtp-child-' . $css_id, get_stylesheet_directory_uri() . $css_path . $css_file, false, $css_version);
+            $css_id++;
         }
-
-        $css_version = filemtime(get_stylesheet_directory() . '/' . $file_name);
-
-        // CHILD THEME  STYLE
-        wp_enqueue_style('wtp-child', get_stylesheet_directory_uri() . '/' . $file_name, array('wtp-phucstrap'), $css_version);
     }
-    add_action('wp_enqueue_scripts', 'wtp_load_styles_child');
+    add_action('wp_enqueue_scripts', 'wtp_load_styles_child', 99);
 }

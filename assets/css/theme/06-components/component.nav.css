@@ -18,6 +18,11 @@
   display: none;
 }
 
+.burger__label {
+  display: none;
+  cursor: pointer;
+}
+
 /*--------------------------------------------------------------
 # NAV SECONDARY - Usually Footer
 --------------------------------------------------------------*/

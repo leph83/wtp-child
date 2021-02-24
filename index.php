@@ -5,61 +5,58 @@ if (!defined('ABSPATH')) {
 
 get_header();
 
-$title = '';
+$title = get_bloginfo('name');
+$image = '';
+$description = '';
 
-// SEARCH
-if (is_search()) {
-    // can't deal with _n for now
-    $title = (int) $wp_query->found_posts . ' ' . __('results for', 'wtp-child');
-    if ((int) $wp_query->found_posts == 1) {
-        $title = (int) $wp_query->found_posts . ' ' . __('result for', 'wtp-child');
-    }
+// STATIC BLOG PAGE
+if (is_home() && get_option('page_for_posts') ) {
+        $id = get_option('page_for_posts');
+        $image_id = get_post_thumbnail_id($id) ?? false;
 
-    $title = $title . ' <span>"' . esc_html(get_search_query()) . '"</span>';
+        $title = get_the_title($id);
+        $image = wp_get_attachment_image($image_id, 'original');
 }
 
-// ARCHIVE
+// ARCHIVE PAGES
 if (is_archive()) {
     $title = get_the_archive_title();
     $description = get_the_archive_description();
 }
 
-if (is_home()) {
-    if (get_option('page_for_posts') != 0) {
-        $id = get_option('page_for_posts');
-        $title = get_the_title($id);
-    }
-}
-
-
-// HTML 5 MARKUP
-$section_tag = 'section';
-if (is_singular()) {
-    $section_tag = 'div';
-}
-
 ?>
-<<?php echo $section_tag; ?>>
 
-    <?php if ($title) : ?>
-        <h2 class="lc  lc--2  padding-left padding-right"><?php echo $title; ?></h2>
-    <?php endif; ?>
+<?php if (have_posts()) : ?>
+    <section>
 
+        <div class="block  block--hero">
+            <div class="block__media">
+                <?php echo $image; ?>
+            </div>
 
-    <?php if (have_posts()) : ?>
+            <div class="block__content">
+                <h1 class="block__title">
+                    <?php echo $title; ?>
+                </h1>
+            </div>
+        </div>
 
-        <?php while (have_posts()) : the_post(); ?>
-
-            <?php get_template_part('template-parts/content/content', 'content'); ?>
-
-        <?php endwhile; ?>
+        <div class="grid  grid--2  grid-gap  padding">
+            <?php while (have_posts()) : the_post(); ?>
+                <?php get_template_part('template-parts/content/content', 'overview'); ?>
+            <?php endwhile; ?>
+        </div>
 
         <?php the_posts_navigation(); ?>
+    </section>
 
-    <?php else : ?>
-        <?php get_template_part('template-parts/content/content', 'none'); ?>
-    <?php endif; ?>
+<?php else : ?>
+    <?php get_template_part('template-parts/content/content', 'none'); ?>
+<?php endif; ?>
 
-</<?php echo $section_tag; ?>>
+<?php wp_link_pages(array(
+    'before' => '<div>',
+    'after' => '</div>',
+)); ?>
 
 <?php get_footer();
