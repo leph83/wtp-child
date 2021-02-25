@@ -41,6 +41,8 @@ if ($postcategories) {
 
     <?php printf(__('By %s'), get_the_author_posts_link()); ?>
     <?php echo $date; ?>
+    <?php echo $categories; ?>
+    <?php echo $tags; ?>
 
 
 
