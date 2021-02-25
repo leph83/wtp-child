@@ -4,7 +4,9 @@
 .alignfull,
 .alignwide,
 .aligncontent,
-.entry-content > * {
+.entry-content > *,
+.alignwide.wp-block-gallery > figcaption,
+.alignfull.wp-block-gallery > figcaption {
   margin-left: auto;
   margin-right: auto;
   width: calc(100vw - var(--gutter) * 2);
@@ -48,8 +50,8 @@
 /*--------------------------------------------------------------
 # INNER CONTAINER WIDTH
 --------------------------------------------------------------*/
-.wp-block-cover__inner-container,
-.wp-block-group__inner-container,
+.wp-block-cover > .wp-block-cover__inner-container,
+.wp-block-group > .wp-block-group__inner-container,
 .blocks-gallery-caption {
   max-width: var(--max-width-3);
 }
@@ -61,24 +63,15 @@
 
 .wp-block-group__inner-container {
   /* margin collapse fix */
-  display: flex;
-  flex-direction: column;
-}
-
-/* like, who does this? */
-.alignwide.wp-block-gallery > figcaption,
-.alignfull.wp-block-gallery > figcaption {
-  margin-left: auto;
-  margin-right: auto;
-  width: calc(100vw - var(--gutter) * 2);
+  overflow: auto;
 }
 
 /*--------------------------------------------------------------
 # ELEMENTS WITH BACKGROUND COLOR
 --------------------------------------------------------------*/
 .entry-content .has-background:not(.wp-block-media-text) {
-  padding-left: var(--gutter);
-  padding-right: var(--gutter);
+  padding-left: calc(var(--gutter) * 2);
+  padding-right: calc(var(--gutter) * 2);
 }
 
 /*--------------------------------------------------------------
@@ -103,12 +96,18 @@
 # MEDIA TEXT FIX
 --------------------------------------------------------------*/
 .wp-block-media-text .wp-block-media-text__content {
-  padding: 0 var(--gutter);
+  padding: 0;
 }
 
-.wp-block-media-text:not(.has-background) .wp-block-media-text__content {
-  /* nobody might recognize that double padding on the side */
-  /* padding-right: 0; */
+.wp-block-media-text {
+  display: grid;
+  grid-gap: calc(var(--gutter) * 1);
+}
+
+@media (min-width: 600px) {
+  .wp-block-media-text {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -135,4 +134,14 @@
 
 .entry-content .alignright {
   margin-left: var(--gutter);
+}
+
+.wp-block-cover,
+.wp-block-cover-image {
+  padding: 0;
+}
+
+.wp-block-cover > .wp-block-cover__inner-container {
+  width: calc(100vw - var(--gutter) * 2);
+  max-width: var(--max-width-3);
 }
