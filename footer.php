@@ -6,6 +6,7 @@ if (!defined('ABSPATH')) {
 
 <?php if (is_active_sidebar('sidebar-1')) : ?>
     <aside class="sidebar">
+        <h2 class="screen-reader-text">Sidebar</h2>
         <div class="sidebar__content">
             <ul class="widget">
                 <?php dynamic_sidebar('sidebar-1'); ?>
@@ -18,7 +19,7 @@ if (!defined('ABSPATH')) {
 
 <footer id="footer" class="footer">
     <section class="footer__content">
-        <h2 class="screen-reader-text"><?php echo __('Footer', 'wtp-child'); ?></h2>
+        <h2 class="screen-reader-text">Footer</h2>
 
         <div class="footer__item">
             &copy;<?php echo date('Y'); ?> - <?php echo get_bloginfo('name'); ?>
