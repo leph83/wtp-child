@@ -4,42 +4,31 @@ if (!defined('ABSPATH')) {
 }
 
 $title = get_the_title();
-$image = get_the_post_thumbnail(get_the_id(), 'large') ?? false;
+$image = get_the_post_thumbnail(get_the_id(), 'original') ?? false;
 
 ?>
 
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(''); ?>>
 
-    <div class="lc  lc--3  lc--padding">
-        <?php echo $image; ?>
+    <?php echo $image; ?>
 
-        <h1>
-            <?php echo $title; ?>
-        </h1>
-    </div>
+    <h1>
+        <?php echo $title; ?>
+    </h1>
 
 
     <div class="entry-content  clearfix">
-        <?php if (is_singular()) : ?>
-            <?php the_content(); ?>
-        <?php else : ?>
-            <?php the_excerpt(); ?>
-        <?php endif; ?>
+        <?php the_content(); ?>
     </div>
 
     <?php comments_template('', true); ?>
 
 </article>
 
-
-<?php // pages and posts can have pagination - but not for archive etc. 
-?>
 <?php wp_link_pages(array(
-    'before' => '<div class="lc  lc--3  lc--padding">',
+    'before' => '<div class="">',
     'after' => '</div>',
 )); ?>
-
-
 
 </div>

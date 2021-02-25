@@ -5,7 +5,6 @@ if (!defined('ABSPATH')) {
 
 $title = get_the_title();
 $image = get_the_post_thumbnail(get_the_id(), 'large') ?? false;
-$author = esc_html('by ') . get_the_author_posts_link();
 $date = get_the_time(get_option('date_format'));
 
 // TAGS
@@ -28,47 +27,26 @@ if ($postcategories) {
     }
 }
 
-// POSTS
-$postmeta = '';
-if (get_post_type() == 'post') {
-    $postmeta .=
-        '<div class="">'
-        . $author . ' | ' . $date .
-        '</div>'
-        .
-        '<div class="">' . $tags . '</div>'
-        .
-        '<div class="">' . $categories . '</div>
-    ';
-
-    if (!empty(get_the_post_thumbnail_caption())) {
-        $image = '<figure>' . $image . '<figcaption>' . get_the_post_thumbnail_caption() . '</figcaption></figure>';
-    }
-}
-
 ?>
 
 
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(''); ?>>
 
-    <div class="lc  lc--3  lc--padding">
-        <?php echo $image; ?>
+    <?php echo $image; ?>
 
-        <h1>
-            <?php echo $title; ?>
-        </h1>
+    <h1>
+        <?php echo $title; ?>
+    </h1>
 
-        <?php echo $postmeta; ?>
-    </div>
+    <?php printf(__('By %s'), get_the_author_posts_link()); ?>
+    <?php echo $date; ?>
+
+
 
 
     <div class="entry-content  clearfix">
-        <?php if (is_singular()) : ?>
-            <?php the_content(); ?>
-        <?php else : ?>
-            <?php the_excerpt(); ?>
-        <?php endif; ?>
+        <?php the_content(); ?>
     </div>
 
     <?php comments_template('', true); ?>
@@ -76,18 +54,13 @@ if (get_post_type() == 'post') {
 </article>
 
 
-
-<?php // pages and posts can have pagination - but not for archive etc. 
-?>
 <?php wp_link_pages(array(
-    'before' => '<div class="lc  lc--3  lc--padding">',
+    'before' => '<div class="">',
     'after' => '</div>',
 )); ?>
 
 
-<div class="lc  lc--2  lc--padding  flex  flex-justify--space-between">
-    <?php //show previous and next posts - but not for pages duh 
-    ?>
+<div class="">
     <div class="margin-right--auto">
         <?php previous_post_link(); ?>
     </div>
