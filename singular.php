@@ -21,9 +21,4 @@ get_header();
     <?php get_template_part('template-parts/content/content', 'none'); ?>
 <?php endif; ?>
 
-<?php wp_link_pages(array(
-    'before' => '<div>',
-    'after' => '</div>',
-)); ?>
-
 <?php get_footer();

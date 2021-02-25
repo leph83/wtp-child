@@ -69,6 +69,3 @@ if ($postcategories) {
         <?php next_post_link(); ?>
     </div>
 </div>
-
-
-</div>
