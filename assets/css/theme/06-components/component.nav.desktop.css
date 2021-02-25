@@ -20,7 +20,8 @@
     white-space: nowrap;
   }
 
-  .nav--header .nav__item--active .nav__link {
+  .nav--header .nav__item--active > .nav__link,
+  .nav--header .current_page_ancestor > .nav__link {
     color: var(--color-1);
   }
 
@@ -32,5 +33,9 @@
   .nav--header .nav__item:hover > ul,
   .nav--header .nav__item:focus-within > ul {
     display: block;
+  }
+
+  .nav--header ul ul {
+    margin-left: var(--gutter);
   }
 }

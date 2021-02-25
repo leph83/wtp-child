@@ -2,10 +2,10 @@
   /*--------------------------------------------------------------
 # MOBILE NAV BURGER
 --------------------------------------------------------------*/
-.burger__label {
-  display: block;
-  cursor: pointer;
-}
+  .burger__label {
+    display: block;
+    cursor: pointer;
+  }
 
   .burger__input:checked ~ .burger__content .nav {
     display: block;
@@ -14,6 +14,10 @@
   /*--------------------------------------------------------------
   # MOBILE NAV
   --------------------------------------------------------------*/
+  .burger__content {
+    position: relative;
+  }
+
   .nav--header {
     display: none;
     position: absolute;
@@ -40,9 +44,5 @@
   .nav--header ul .nav__link {
     padding-left: calc(var(--gutter) * 1);
     font-size: var(--font-size-8);
-  }
-
-  .nav--header .wpml-ls-item {
-    display: inline-block;
   }
 }
