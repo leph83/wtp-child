@@ -5,18 +5,19 @@ if (!defined('ABSPATH')) {
 
 get_header();
 
-$title = (int) $wp_query->found_posts . ' ' . __('results for', 'test');
-if ((int) $wp_query->found_posts == 1) {
-    $title = (int) $wp_query->found_posts . ' ' . __('result for', 'test');
-}
+// $title = (int) $wp_query->found_posts . ' ' . __('Search for:');
+// if ((int) $wp_query->found_posts == 1) {
+//     $title = (int) $wp_query->found_posts . ' ' . __('result for');
+// }
 
-$title = $title . ' <span>"' . esc_html(get_search_query()) . '"</span>';
+$searchquery = esc_html(get_search_query());
 
+$title .= '"' . $searchquery . '" - ' . __('Search Results') . ': ' . $wp_query->found_posts;
 
 ?>
 <section>
 
-    <h2 class=""><?php echo $title; ?></h2>
+    <h1><?php echo $title; ?></h1>
 
     <?php if (have_posts()) : ?>
 

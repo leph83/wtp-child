@@ -5,8 +5,8 @@ if (!defined('ABSPATH')) {
 ?>
 
 <?php if (is_active_sidebar('sidebar-1')) : ?>
-    <aside class="footer__top">
-        <div class="footer__topcontent">
+    <aside class="sidebar">
+        <div class="sidebar__content">
             <ul class="widget">
                 <?php dynamic_sidebar('sidebar-1'); ?>
             </ul>
@@ -17,7 +17,7 @@ if (!defined('ABSPATH')) {
 </main>
 
 <footer id="footer" class="footer">
-    <section class="footer__content  lc  lc--2  lc--padding">
+    <section class="footer__content">
         <h2 class="screen-reader-text"><?php echo __('Footer', 'wtp-child'); ?></h2>
 
         <div class="footer__item">

@@ -17,8 +17,6 @@ $image = get_the_post_thumbnail(get_the_id(), 'large') ?? false;
         <h1>
             <?php echo $title; ?>
         </h1>
-
-        <?php echo $postmeta; ?>
     </div>
 
 

@@ -26,5 +26,4 @@ get_header();
     'after' => '</div>',
 )); ?>
 
-
 <?php get_footer();

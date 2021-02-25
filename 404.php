@@ -7,13 +7,13 @@ get_header();
 ?>
 
 <article>
-    <h1 class="page__title">
-        <?php esc_html_e('404', 'test'); ?>
+    <h1>
+        <?php echo __('404', 'wtp-child'); ?>
     </h1>
 
-    <p><?php esc_html_e('This is not the page you were looking for. Keep moving', 'test'); ?></p>
+    <p><?php echo __('Nothing to see here', 'wtp-child'); ?></p>
 
-    <a class="btn  btn--primary" href="<?php echo get_home_url(); ?>">proceed to home page</a>
+    <a class="" href="<?php echo get_home_url(); ?>"><?php echo __('back to homepage', 'wtp-child'); ?></a>
 </article>
 
 <?php get_footer();

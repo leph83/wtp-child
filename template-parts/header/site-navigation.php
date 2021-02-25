@@ -13,6 +13,7 @@ if (!defined('ABSPATH')) {
         <?php
         wp_nav_menu(array(
             'theme_location'        => 'primary',
+            'container'     => '',
             'fallback_cb'           => false,
             'menu_class'            => 'nav  nav--header',
             'add_li_class'          => 'nav__item',

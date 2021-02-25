@@ -11,8 +11,7 @@ if (!defined('ABSPATH')) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
 
-    <meta name="description" content="
-    <?php echo get_the_excerpt(); ?>">
+    <meta name="description" content="<?php echo get_the_excerpt(); ?>">
 
     <?php wp_head(); ?>
 </head>
@@ -24,7 +23,7 @@ if (!defined('ABSPATH')) {
     
     <header id="header" class="header  burger__content  ">
 
-        <div class="header__content  lc  lc--2  lc--padding  position--relative">
+        <div class="header__content">
 
             <div class="header__item">
                 <?php get_template_part('template-parts/header/site-branding'); ?>

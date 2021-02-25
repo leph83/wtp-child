@@ -2,17 +2,17 @@
   /*--------------------------------------------------------------
 # NAV PRIMARY - Usually Header
 --------------------------------------------------------------*/
-  .nav--dropdown {
+  .nav--header {
     display: flex;
     flex-wrap: wrap;
     margin-left: calc(var(--gutter) * -1);
   }
 
-  .nav--dropdown .nav__item {
+  .nav--header .nav__item {
     position: relative;
   }
 
-  .nav--dropdown .nav__link {
+  .nav--header .nav__link {
     color: var(--color-black);
     background-color: var(--color-white);
     padding: calc(var(--gutter) / 2) var(--gutter);
@@ -20,17 +20,17 @@
     white-space: nowrap;
   }
 
-  .nav--dropdown .nav__item--active .nav__link {
+  .nav--header .nav__item--active .nav__link {
     color: var(--color-1);
   }
 
-  .nav--dropdown > .nav__item > ul {
+  .nav--header > .nav__item > ul {
     display: none;
     position: absolute;
   }
 
-  .nav--dropdown .nav__item:hover > ul,
-  .nav--dropdown .nav__item:focus-within > ul {
+  .nav--header .nav__item:hover > ul,
+  .nav--header .nav__item:focus-within > ul {
     display: block;
   }
 }

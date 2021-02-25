@@ -10,12 +10,12 @@ $image = '';
 $description = '';
 
 // STATIC BLOG PAGE
-if (is_home() && get_option('page_for_posts') ) {
-        $id = get_option('page_for_posts');
-        $image_id = get_post_thumbnail_id($id) ?? false;
+if (is_home() && get_option('page_for_posts')) {
+    $id = get_option('page_for_posts');
+    $image_id = get_post_thumbnail_id($id) ?? false;
 
-        $title = get_the_title($id);
-        $image = wp_get_attachment_image($image_id, 'original');
+    $title = get_the_title($id);
+    $image = wp_get_attachment_image($image_id, 'original');
 }
 
 // ARCHIVE PAGES
@@ -24,39 +24,41 @@ if (is_archive()) {
     $description = get_the_archive_description();
 }
 
+$args = array(
+    // 'prev_text' => '',
+    // 'next_text' => '',
+    'screen_reader_text' => '',
+    'aria_label' => '', 
+    'class' => 'nav', 
+);
+
 ?>
+<section>
 
-<?php if (have_posts()) : ?>
-    <section>
+    <?php echo $image; ?>
 
-        <div class="block  block--hero">
-            <div class="block__media">
-                <?php echo $image; ?>
-            </div>
+    <h1 class="block__title">
+        <?php echo $title; ?>
+    </h1>
 
-            <div class="block__content">
-                <h1 class="block__title">
-                    <?php echo $title; ?>
-                </h1>
-            </div>
-        </div>
+    <?php echo $description; ?>
 
-        <div class="grid  grid--2  grid-gap  padding">
-            <?php while (have_posts()) : the_post(); ?>
-                <?php get_template_part('template-parts/content/content', 'overview'); ?>
-            <?php endwhile; ?>
-        </div>
 
-        <?php the_posts_navigation(); ?>
-    </section>
+    
+    <?php if (have_posts()) : ?>
 
-<?php else : ?>
-    <?php get_template_part('template-parts/content/content', 'none'); ?>
-<?php endif; ?>
+        <?php while (have_posts()) : the_post(); ?>
+            <?php get_template_part('template-parts/content/content', 'overview'); ?>
+        <?php endwhile; ?>
 
-<?php wp_link_pages(array(
-    'before' => '<div>',
-    'after' => '</div>',
-)); ?>
+        <?php echo get_the_posts_navigation($args); ?>
+
+    <?php else : ?>
+
+        <?php get_template_part('template-parts/content/content', 'none'); ?>
+
+    <?php endif; ?>
+
+</section>
 
 <?php get_footer();
