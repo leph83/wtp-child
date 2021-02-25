@@ -2,15 +2,15 @@
 # BRANDING - LOGO
     DEFAULT SETTINGS FOR EVERY PROJECT
 --------------------------------------------------------------*/
-.custom-logo-link {
+.site-branding__logo-link {
     display: block;
 }
 
-.site-title {
+.site-branding__title-tagline {
     font-size: var(--font-size-1);
 }
 
-.site-title a {
+.site-branding__title-tagline a {
     color: inherit;
     text-decoration: none;
 }
