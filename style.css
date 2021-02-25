@@ -1,15 +1,16 @@
 /*
-Theme Name:     WTP Child
-Theme URI:      http://what-the-phuc.com
-Author:         Phuc Le
-Author URI:     http://phuc.at
-Description:    a Child Theme
-Requires at least: 5.6
-Tested up to:   5.6
-Requires PHP:   7
-Version:        2021.1
-License:        GNU General Public License v2 or later
-License URI:    http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain:    wtp-child
-Template:       wtp
+Theme Name:         wtp child theme template
+Theme URI:          http://what-the-phuc.com
+Author:             Phuc Le
+Author URI:         http://phuc.at
+Description:        a Child Theme
+Version:            1.0
+Requires at least:  5.6.2
+Tested up to:       5.6.2
+Requires PHP:       7.2
+License:            GNU General Public License v2 or later
+License URI:        http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:        wtp-child
+Tags:               blog
+Template:           wtp
 */

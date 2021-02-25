@@ -12,7 +12,7 @@ $date = get_the_time(get_option('date_format'));
 $posttags = get_the_tags();
 $tags = '';
 if ($posttags) {
-    $tags = __('tags', 'test') . ': ';
+    $tags = __('tags', 'wtp-child') . ': ';
     foreach ($posttags as $tag) {
         $tags .= '<a href="' . get_term_link($tag->term_id) . '">' . $tag->name . '</a> ';
     }
@@ -22,7 +22,7 @@ if ($posttags) {
 $postcategories = get_the_category();
 $categories = '';
 if ($postcategories) {
-    $categories = __('categories', 'test') . ': ';
+    $categories = __('categories', 'wtp-child') . ': ';
     foreach ($postcategories as $category) {
         $categories .= '<a href="' . get_term_link($category->term_id) . '">' . $category->name . '</a> ';
     }
