@@ -26,13 +26,15 @@
 /*--------------------------------------------------------------
 # NAV SECONDARY - Usually Footer
 --------------------------------------------------------------*/
-.nav--inline {
+.nav--footer {
   display: flex;
-  margin-left: calc(var(--gutter) * -1);
+  gap: calc(var(--gutter) * .5);
 }
 
-.nav--inline .nav__item {
-  margin-left: var(--gutter);
+.nav--footer .nav__link {
+  display: block;
+  padding-top: calc(var(--gutter) / 2);
+  padding-bottom: calc(var(--gutter) / 2);
 }
 
 /*--------------------------------------------------------------
