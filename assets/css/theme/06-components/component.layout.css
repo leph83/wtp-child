@@ -3,21 +3,24 @@
 - creates layout shift if css not preloaded
 --------------------------------------------------------------*/
 .body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .main {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 .lc--padding {
-    width: calc(100vw - var(--gutter) * 2);
+  width: calc(100vw - var(--gutter) * 2);
 }
 
-
 ::selection {
-    background-color: var(--color-black);
-    color: var(--color-white);
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+[id] {
+  scroll-margin-top: var(--gutter);
 }
