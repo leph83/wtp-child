@@ -9,7 +9,7 @@
 .alignfull.wp-block-gallery > figcaption {
   margin-left: auto;
   margin-right: auto;
-  width: calc(100vw - var(--gutter) * 2);
+  width: calc(100% - var(--gutter) * 2);
 }
 
 .entry-content > *:not(.alignwide):not(.alignfull) {
@@ -142,6 +142,6 @@
 }
 
 .wp-block-cover > .wp-block-cover__inner-container {
-  width: calc(100vw - var(--gutter) * 2);
+  width: calc(100% - var(--gutter) * 2);
   max-width: var(--max-width-3);
 }
