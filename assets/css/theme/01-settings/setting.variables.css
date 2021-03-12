@@ -20,16 +20,16 @@ Wordpress Customizer Setting will override this because it's inline
 Wordpress Customizer Setting will override this because it's inline
 --------------------------------------------------------------*/
 :root {
-  --color-white: #fff;
-  --color-black: #000;
+  --color-white: #ffffff;
+  --color-black: #000000;
 
-  --color-1: #0cb4ce;
-  --color-2: #444;
-  --color-3: #1595a9;
+  --color-1: #058935;
+  --color-2: #1f518e;
+  --color-3: #7c0202;
 
-  --color-4: #fff;
-  --color-5: #fff;
-  --color-6: #fff;
+  --color-4: #141414;
+  --color-5: #c4c4c4;
+  --color-6: #212121;
 }
 
 /*--------------------------------------------------------------
@@ -74,4 +74,5 @@ Wordpress Customizer Setting will override this because it's inline
   /* Font Family */
   --font-family: 'Poppins', sans-serif;
   --font-family-2: 'Hind', sans-serif;
+  --font-family-3: 'monospace';
 }

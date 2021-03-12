@@ -10,7 +10,7 @@
     font-size: var(--font-size-1);
 }
 
-.site-branding__title-tagline a {
+.site-branding__logo-link {
     color: inherit;
     text-decoration: none;
 }
