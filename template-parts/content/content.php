@@ -30,5 +30,3 @@ $image = get_the_post_thumbnail(get_the_id(), 'original') ?? false;
     'before' => '<div class="">',
     'after' => '</div>',
 )); ?>
-
-</div>
