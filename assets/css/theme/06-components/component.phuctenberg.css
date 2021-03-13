@@ -21,6 +21,13 @@
   width: calc(100% - var(--gutter) * 2);
 }
 
+.has-background > [class*=__inner-container] > * {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--max-width-3);
+  width: calc(100% - var(--gutter) * 2);
+}
+
 /*--------------------------------------------------------------
 # VERTICAL RHYTHM
 --------------------------------------------------------------*/
@@ -36,12 +43,16 @@
   margin-top: var(--gutter);
 }
 
+/* EXCEPTIONS */
+.entry-content .has-background + .has-background {
+  margin-top: 0;
+}
+
 /*--------------------------------------------------------------
-# BLOCK GROUP
+# BLOCK GROUP HAS BACKGROUND
 --------------------------------------------------------------*/
 
-/* group with bg */
-.has-background .wp-block-group__inner-container {
+.has-background [class*=__inner-container] {
   padding-top: var(--gutter);
   padding-bottom: var(--gutter);
 }
