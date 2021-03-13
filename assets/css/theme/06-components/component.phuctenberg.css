@@ -1,34 +1,20 @@
 /*--------------------------------------------------------------
 # CONTENT WIDTHS
 --------------------------------------------------------------*/
-.entry-content * {
+.entry-content > *,
+.wp-block-group__inner-container > * {
   margin-left: auto;
   margin-right: auto;
 }
 
-.alignfull {
-  max-width: var(--max-width-1);
+.entry-content > .alignwide,
+.wp-block-group__inner-container > .alignwide {
+  width: calc(100% - var(--gutter) * 2);
 }
 
-.alignwide {
-  max-width: var(--max-width-2);
-}
-
-.entry-content *:not(.alignwide):not(.alignfull) {
+.entry-content > *:not(.alignwide):not(.alignfull),
+.wp-block-group__inner-container > *:not(.alignwide):not(.alignfull) {
   max-width: var(--max-width-3);
-}
-
-/* SHAME */
-.entry-content * [class*="wp-image"][class*="wp-image"] {
-  max-width: 100%;
-}
-
-/*--------------------------------------------------------------
-# CONTENT WIDTHS WITH PADDING
---------------------------------------------------------------*/
-.alignwide.wp-block-media-text,
-.alignwide.wp-block-group,
-.alignwide.wp-block-columns {
   width: calc(100% - var(--gutter) * 2);
 }
 
@@ -50,7 +36,6 @@
 /*--------------------------------------------------------------
 # BLOCK GROUP
 --------------------------------------------------------------*/
-
 
 /* group with bg */
 .has-background .wp-block-group__inner-container {
@@ -101,7 +86,7 @@
   z-index: 1;
 }
 
-/* FIXED */
+/* BLOCK COVER FIXED */
 .wp-block-cover.has-parallax {
   background-attachment: fixed;
 }
@@ -205,10 +190,6 @@
   overflow-wrap: break-word;
 }
 
-.entry-content .wp-block-columns .wp-block-column > * {
-  max-width: none;
-}
-
 .wp-block-column.is-vertically-aligned-top {
   align-self: flex-start;
 }
@@ -233,8 +214,6 @@
   .entry-content .wp-block-columns .wp-block-column {
     flex-shrink: initial;
     flex-basis: 0;
-    width: 100%;
-    max-width: none;
   }
 } 
 
@@ -244,11 +223,7 @@
 .wp-block-buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--gutter);
-}
-
-.wp-block-button {
-  all: unset;
+  gap: calc(var(--gutter) * 1);
 }
 
 .wp-block-button__link {
@@ -260,11 +235,17 @@
 /*--------------------------------------------------------------
 # BLOCK IMAGE
 --------------------------------------------------------------*/
-.entry-content .wp-block-image figcaption {
+.wp-block-image img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wp-block-image figcaption {
   text-align: center;
   margin-top: calc(var(--gutter) / 2);
 }
 
+/* BLOCK IMAGE ROUNDED */
 .wp-block-image.is-style-rounded img {
   border-radius: 50%;
   overflow: hidden;
