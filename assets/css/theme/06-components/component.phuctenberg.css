@@ -2,7 +2,8 @@
 # CONTENT WIDTHS
 --------------------------------------------------------------*/
 .entry-content > *,
-.wp-block-group__inner-container > * {
+.alignwide.wp-block-group__inner-container > *
+.alignfull.wp-block-group__inner-container > * {
   margin-left: auto;
   margin-right: auto;
 }
@@ -31,7 +32,7 @@
 /* exceptions defined in not */
 .entry-content
   *
-  + *:not(li):not(.wp-block-media-text__content):not(.wp-block-column):not(figcaption):not(.wp-block-button) {
+  + * {
   margin-top: var(--gutter);
 }
 
@@ -192,6 +193,8 @@
   min-width: 0;
   word-break: break-word;
   overflow-wrap: break-word;
+
+  margin-top: 0;
 }
 
 .wp-block-column.is-vertically-aligned-top {
@@ -345,3 +348,10 @@
 /*--------------------------------------------------------------
 # IFRAME
 --------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# LISTS
+--------------------------------------------------------------*/
+.entry-content li {
+  margin-top: 0;
+}
