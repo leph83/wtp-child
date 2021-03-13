@@ -255,6 +255,11 @@
   overflow: hidden;
 }
 
+.alignfull.wp-block-image img {
+  max-width: none;
+  width: 100%;
+}
+
 /*--------------------------------------------------------------
 # BLOCK GALLERY
   is-cropped
@@ -322,6 +327,19 @@
 
 .columns-8 .blocks-gallery-item {
   min-width: calc(100% / 8 - var(--gutter));
+}
+
+
+/*  is-cropped */
+.is-cropped .blocks-gallery-item figure {
+  height: 100%;
+}
+
+.is-cropped .blocks-gallery-item img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  max-width: none;
 }
 
 /*--------------------------------------------------------------
