@@ -8,12 +8,14 @@
 }
 
 .entry-content > .alignwide,
-.wp-block-group__inner-container > .alignwide {
+.alignwide > .wp-block-group__inner-container > .alignwide,
+.alignfull > .wp-block-group__inner-container > .alignwide {
   width: calc(100% - var(--gutter) * 2);
 }
 
 .entry-content > *:not(.alignwide):not(.alignfull),
-.wp-block-group__inner-container > *:not(.alignwide):not(.alignfull) {
+.alignwide > .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull),
+.alignfull > .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull) {
   max-width: var(--max-width-3);
   width: calc(100% - var(--gutter) * 2);
 }
