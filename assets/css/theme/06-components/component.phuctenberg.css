@@ -2,21 +2,21 @@
 # CONTENT WIDTHS
 --------------------------------------------------------------*/
 .entry-content > *,
-.alignwide > .wp-block-group__inner-container > *,
-.alignfull > .wp-block-group__inner-container > * {
+.alignwide > [class*=__inner-container] > *,
+.alignfull > [class*=__inner-container] > * {
   margin-left: auto;
   margin-right: auto;
 }
 
 .entry-content > .alignwide,
-.alignwide > .wp-block-group__inner-container > .alignwide,
-.alignfull > .wp-block-group__inner-container > .alignwide {
+.alignwide > [class*=__inner-container] > .alignwide,
+.alignfull > [class*=__inner-container] > .alignwide {
   width: calc(100% - var(--gutter) * 2);
 }
 
 .entry-content > *:not(.alignwide):not(.alignfull),
-.alignwide > .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull),
-.alignfull > .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull) {
+.alignwide > [class*=__inner-container] > *:not(.alignwide):not(.alignfull),
+.alignfull > [class*=__inner-container] > *:not(.alignwide):not(.alignfull) {
   max-width: var(--max-width-3);
   width: calc(100% - var(--gutter) * 2);
 }
@@ -227,6 +227,7 @@
 
 /*--------------------------------------------------------------
 # BLOCK BUTTONS
+  is-content-justification-center
 --------------------------------------------------------------*/
 .wp-block-buttons {
   display: flex;
@@ -234,10 +235,18 @@
   gap: calc(var(--gutter) * 1);
 }
 
+.wp-block-button {
+  margin-top: 0;
+}
+
 .wp-block-button__link {
   display: inline-block;
   text-decoration: none;
   color: inherit;
+}
+
+.is-content-justification-center {
+  justify-content: center;
 }
 
 /*--------------------------------------------------------------
@@ -295,15 +304,6 @@
   flex-grow: 1;
   flex-basis: calc((40ch - 100%) * 999);
 }
-
-/* .blocks-gallery-item {
-  display: flex;
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-} */
 
 .columns-2 .blocks-gallery-item {
   min-width: calc(100% / 2 - var(--gutter));
