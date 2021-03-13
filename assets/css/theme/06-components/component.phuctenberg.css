@@ -176,10 +176,12 @@
 /*--------------------------------------------------------------
 # BLOCK COLUMNS
 --------------------------------------------------------------*/
-.wp-block-columns {
+.entry-content .wp-block-columns {
   display: flex;
   flex-wrap: wrap;
   gap: var(--gutter);
+
+  /* width: 100%; */
 }
 
 .wp-block-column {
@@ -203,7 +205,7 @@
 }
 
 @media (min-width: 768px) {
-  .wp-block-columns {
+  .entry-content .wp-block-columns {
     flex-wrap: nowrap;
   }
 
@@ -215,7 +217,7 @@
     flex-shrink: initial;
     flex-basis: 0;
   }
-} 
+}
 
 /*--------------------------------------------------------------
 # BLOCK BUTTONS
@@ -250,3 +252,76 @@
   border-radius: 50%;
   overflow: hidden;
 }
+
+/*--------------------------------------------------------------
+# BLOCK GALLERY
+  is-cropped
+  columns-2
+  columns-3
+  columns-4
+  columns-5
+  columns-6
+  columns-7
+  columns-8
+
+  source: https://www.youtube.com/watch?v=RUyNJaoJH_k
+--------------------------------------------------------------*/
+.entry-content .wp-block-gallery {
+  width: 100%;
+}
+
+.blocks-gallery-grid {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gutter);
+}
+
+.blocks-gallery-item {
+  flex-grow: 1;
+  flex-basis: calc((40ch - 100%) * 999);
+}
+
+/* .blocks-gallery-item {
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+} */
+
+.columns-2 .blocks-gallery-item {
+  min-width: calc(100% / 2 - var(--gutter));
+}
+
+.columns-3 .blocks-gallery-item {
+  min-width: calc(100% / 3 - var(--gutter));
+}
+
+.columns-4 .blocks-gallery-item {
+  min-width: calc(100% / 4 - var(--gutter));
+}
+
+.columns-5 .blocks-gallery-item {
+  min-width: calc(100% / 5 - var(--gutter));
+}
+
+.columns-6 .blocks-gallery-item {
+  min-width: calc(100% / 6 - var(--gutter));
+}
+
+.columns-7 .blocks-gallery-item {
+  min-width: calc(100% / 7 - var(--gutter));
+}
+
+.columns-8 .blocks-gallery-item {
+  min-width: calc(100% / 8 - var(--gutter));
+}
+
+/*--------------------------------------------------------------
+# IFRAME
+--------------------------------------------------------------*/
