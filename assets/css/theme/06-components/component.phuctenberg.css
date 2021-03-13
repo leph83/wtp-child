@@ -2,8 +2,8 @@
 # CONTENT WIDTHS
 --------------------------------------------------------------*/
 .entry-content > *,
-.alignwide.wp-block-group__inner-container > *
-.alignfull.wp-block-group__inner-container > * {
+.alignwide > .wp-block-group__inner-container > *,
+.alignfull > .wp-block-group__inner-container > * {
   margin-left: auto;
   margin-right: auto;
 }
@@ -74,7 +74,7 @@
 }
 
 .wp-block-cover::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -82,6 +82,7 @@
   height: 100%;
   background-color: inherit;
   opacity: 0;
+  pointer-events: none;
 }
 
 .wp-block-cover__inner-container {
