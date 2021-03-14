@@ -28,14 +28,16 @@ $args = array(
     // 'prev_text' => '',
     // 'next_text' => '',
     'screen_reader_text' => '',
-    'aria_label' => '', 
-    'class' => 'nav', 
+    'aria_label' => '',
+    'class' => 'nav',
 );
 
 ?>
-<section>
+<section class="lc  lc--padding">
 
-    <?php echo $image; ?>
+    <?php if ($image) : ?>
+        <?php echo $image; ?>
+    <?php endif; ?>
 
     <h1 class="block__title">
         <?php echo $title; ?>

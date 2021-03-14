@@ -11,11 +11,13 @@ $image = get_the_post_thumbnail(get_the_id(), 'original') ?? false;
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(''); ?>>
 
-    <?php echo $image; ?>
+    <div class="lc  lc--padding">
+        <?php echo $image; ?>
 
-    <h1>
-        <?php echo $title; ?>
-    </h1>
+        <h1>
+            <?php echo $title; ?>
+        </h1>
+    </div>
 
 
     <div class="entry-content  clearfix">
