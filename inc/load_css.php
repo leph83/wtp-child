@@ -19,9 +19,7 @@ if (!function_exists('wtp_load_styles_child')) {
             '06-components/component.nav.css',
             '06-components/component.nav.mobile.css',
             '06-components/component.nav.desktop.css',
-
-            '06-components/component.wordpress.css',
-            '06-components/component.phuctenberg.css',
+            
             '06-components/component.gutenberg.custom.css',
 
             //'06-components/component.gutenberg.css',
