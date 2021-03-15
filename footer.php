@@ -18,7 +18,7 @@ if (!defined('ABSPATH')) {
 </main>
 
 <footer id="footer" class="footer">
-    <section class="footer__content">
+    <section class="footer__content  lc  lc--padding">
         <h2 class="screen-reader-text">Footer</h2>
 
         <div class="footer__item">

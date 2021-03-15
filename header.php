@@ -30,7 +30,7 @@ if (empty($meta_description)) {
     
     <header id="header" class="header  burger__content  ">
 
-        <div class="header__content">
+        <div class="header__content  lc  lc--padding">
 
             <div class="header__item">
                 <?php get_template_part('template-parts/header/site-branding'); ?>
