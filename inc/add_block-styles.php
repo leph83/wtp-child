@@ -52,7 +52,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 
 
-if (!function_exists('wtp_register_block_style')) {
+if (!function_exists('wtp_child_register_block_styles')) {
 	/**
 	 * Register block styles.
 	 *
@@ -60,7 +60,7 @@ if (!function_exists('wtp_register_block_style')) {
 	 *
 	 * @return void
 	 */
-	function wtp_register_block_styles()
+	function wtp_child_register_block_styles()
 	{
 		// Spacer Default
 		register_block_style(
@@ -72,5 +72,5 @@ if (!function_exists('wtp_register_block_style')) {
 		);
 	}
 
-	add_action('init', 'wtp_register_block_styles');
+	add_action('init', 'wtp_child_register_block_styles');
 }
