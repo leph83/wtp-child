@@ -1,11 +1,6 @@
 /*--------------------------------------------------------------
 # FOOTER
 --------------------------------------------------------------*/
-.footer {
-  background-color: var(--color-black);
-  color: var(--color-white);
+.footer__content {
 
-  padding-top: var(--gutter);
-  padding-bottom: var(--gutter);
-  margin-top: var(--gutter);
 }

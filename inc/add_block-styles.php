@@ -66,8 +66,8 @@ if (!function_exists('wtp_child_register_block_styles')) {
 		register_block_style(
 			'core/spacer',
 			array(
-				'name'  => 'default',
-				'label' => esc_html__('Default', 'wtp-child'),
+				'name'  => 'gutter',
+				'label' => esc_html__('gutter', 'wtp-child'),
 			)
 		);
 	}
