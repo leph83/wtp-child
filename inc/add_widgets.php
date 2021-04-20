@@ -13,7 +13,7 @@ if ( !function_exists('wtp_widgets_init_child') ) {
     
         register_sidebar(array(
             'name'          => 'Footer 1',
-            'id'            => 'Footer-1',
+            'id'            => 'footer-1',
             'description'   => 'Footer Widget',
         ));
     }
