@@ -73,6 +73,7 @@ Wordpress Customizer Setting will override this because it's inline
 :root {
   /* Font Family */
   --font-family: 'Poppins', sans-serif;
+  --font-family-1: var(--font-family);
   --font-family-2: 'Hind', sans-serif;
   --font-family-3: 'monospace';
 }
