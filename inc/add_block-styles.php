@@ -66,8 +66,24 @@ if (!function_exists('wtp_child_register_block_styles')) {
 		register_block_style(
 			'core/spacer',
 			array(
-				'name'  => 'gutter',
-				'label' => esc_html__('gutter', 'wtp-child'),
+				'name'  => 'single',
+				'label' => esc_html__('single', 'wtp-child'),
+			)
+		);
+
+		register_block_style(
+			'core/spacer',
+			array(
+				'name'  => 'double',
+				'label' => esc_html__('double', 'wtp-child'),
+			)
+		);
+
+		register_block_style(
+			'core/spacer',
+			array(
+				'name'  => 'tripple',
+				'label' => esc_html__('tripple', 'wtp-child'),
 			)
 		);
 	}
