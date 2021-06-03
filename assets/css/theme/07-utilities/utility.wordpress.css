@@ -33,12 +33,12 @@ This is a template for a stylesheet that allows WordPress users to use a custom 
  .block-editor-block-list__layout.is-root-container,
  ul,
  ol {
-   font-family: var(--font-family);
+   font-family: var(--font-family-1);
  }
  
  /* Monospace font for code */
  pre, code, kbd, tt, var {
-     font-family: var(--font-family);
+     font-family: var(--font-family-1);
  }
  
  /* Format post images */
