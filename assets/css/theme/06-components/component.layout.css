@@ -1,33 +1,20 @@
 /*--------------------------------------------------------------
 # DEFAULT
 --------------------------------------------------------------*/
+
 .lc--padding {
   padding-left: var(--gutter);
   padding-right: var(--gutter);
 }
 
+/* SELECTION COLOR */
 ::selection {
   background-color: var(--color-black);
   color: var(--color-white);
 }
 
+/* SET SCROLLOFFSET */
 [id] {
   scroll-margin-top: var(--gutter);
 }
 
-/*--------------------------------------------------------------
-# LAYOUT
---------------------------------------------------------------*/
-.body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.header {}
-
-.main {
-  flex-grow: 1;
-}
-
-.footer {}
