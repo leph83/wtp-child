@@ -8,6 +8,8 @@ if (empty($meta_description)) {
     $meta_description = get_bloginfo('name');
 }
 
+$image = get_header_image() ?? false;
+
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -28,7 +30,7 @@ if (empty($meta_description)) {
 
     <input id="burger" type="checkbox" class="burger__input  hidden">
     
-    <header id="header" class="header  burger__content  ">
+    <header id="header" class="header  burger__content" style="background-image: url('<?php echo $image; ?>');">
 
         <div class="header__content  lc  lc--padding">
 
