@@ -12,6 +12,7 @@ if (!function_exists('wtp_load_styles_child')) {
             '01-settings/setting.fonts.css',
             '01-settings/setting.variables.css',
 
+            '06-components/component.body.css',
             '06-components/component.layout.css',
             '06-components/component.header.css',
             '06-components/component.footer.css',
