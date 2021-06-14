@@ -33,8 +33,11 @@
   gap: calc(var(--gutter) * .5);
 }
 
-.nav--footer .nav__link {
-
+.nav--footer .nav__link:hover,
+.nav--footer .nav__link:active,
+.nav--footer .nav__link:focus,
+.nav--footer .nav__link--active {
+  color: var(--color-1);
 }
 
 /*--------------------------------------------------------------

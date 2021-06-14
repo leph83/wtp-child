@@ -25,7 +25,9 @@
     color: var(--color-1);
   }
 
-  .nav--header .nav__link:hover {
+  .nav--header .nav__link:hover,
+  .nav--header .nav__link:active,
+  .nav--header .nav__link:focus {
     color: var(--color-1);
   }
 
@@ -48,6 +50,8 @@
   - Last menu items opens to the left instead of right
   --------------------------------------------------------------*/
   .nav--header .nav--sub>.nav__item:hover>.nav--sub,
+  .nav--header .nav--sub>.nav__item:active>.nav--sub,
+  .nav--header .nav--sub>.nav__item:focus>.nav--sub,
   .nav--header .nav--sub>.nav__item:focus-within>.nav--sub {
     display: block;
   }
