@@ -33,3 +33,16 @@
   --font-family-2: serif;
   --font-family-3: monospace;
 }
+
+/*--------------------------------------------------------------
+# SPACING
+--------------------------------------------------------------*/
+:root {
+  --gutter-outer: var(--gutter);
+}
+
+@media (min-width: 768px) {
+  :root {
+    --gutter-outer: calc(var(--gutter) * 4);
+  } 
+}

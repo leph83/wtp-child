@@ -1,11 +1,13 @@
 @media (min-width: 768px) {
+
   /*--------------------------------------------------------------
-# NAV PRIMARY - Usually Header
---------------------------------------------------------------*/
+  # NAV PRIMARY - Usually Header
+  --------------------------------------------------------------*/
   .nav--header {
     display: flex;
     flex-wrap: wrap;
-    margin-left: calc(var(--gutter) * -1);
+    gap: var(--gutter);
+    align-items: center;
   }
 
   .nav--header .nav__item {
@@ -13,37 +15,55 @@
   }
 
   .nav--header .nav__link {
-    color: var(--color-2);
+    padding-left: calc(var(--gutter) / 2);
+    padding-right: calc(var(--gutter) / 2);
+    padding-top: calc(var(--gutter) / 2);
+    padding-bottom: calc(var(--gutter) / 2);
+  }
 
-    padding: calc(var(--gutter) / 2) var(--gutter);
-    margin-left: var(--gutter);
-    white-space: nowrap;
-
-
+  .nav--header .nav__link--active {
+    color: var(--color-1);
   }
 
   .nav--header .nav__link:hover {
-    border-bottom: 1px solid var(--color-black);
+    color: var(--color-1);
   }
 
-  .nav--header .nav__item--active > .nav__link,
-  .nav--header .current_page_ancestor > .nav__link {
-    /* color: var(--color-1); */
-
-    border-bottom: 1px solid var(--color-black);
-  }
-
-  .nav--header > .nav__item > ul {
+  /*--------------------------------------------------------------
+  # LEVEL 2
+  --------------------------------------------------------------*/
+  .nav--header .nav--sub {
     display: none;
     position: absolute;
+    background-color: var(--color-black);
   }
 
-  .nav--header .nav__item:hover > ul,
-  .nav--header .nav__item:focus-within > ul {
+  .nav--header>.nav__item:hover>.nav--sub,
+  .nav--header>.nav__item:focus-within>.nav--sub {
     display: block;
   }
 
-  .nav--header ul ul {
-    margin-left: var(--gutter);
+  /*--------------------------------------------------------------
+  # LEVEL 3
+  - Last menu items opens to the left instead of right
+  --------------------------------------------------------------*/
+  .nav--header .nav--sub>.nav__item:hover>.nav--sub,
+  .nav--header .nav--sub>.nav__item:focus-within>.nav--sub {
+    display: block;
+  }
+
+  .nav--header .nav__item--active>.nav__link,
+  .nav--header .current_page_ancestor>.nav__link {
+    color: var(--color-1);
+  }
+
+  .nav--header .nav--sub .nav--sub {
+    left: 100%;
+    top: 0;
+  }
+
+  .nav--header>.nav__item:last-child .nav--sub .nav--sub {
+    right: 100%;
+    left: initial;
   }
 }

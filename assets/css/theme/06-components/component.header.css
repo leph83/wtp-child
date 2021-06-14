@@ -2,7 +2,11 @@
 # BRANDING - LOGO
     DEFAULT SETTINGS FOR EVERY PROJECT
 --------------------------------------------------------------*/
-.site-branding {}
+.site-branding {
+    display: flex;
+    align-items: center;
+    gap: var(--gutter);
+}
 
 .site-branding__logo-link {
     display: block;
@@ -12,6 +16,16 @@
 
 .site-branding__title-tagline {
     font-size: var(--font-size-7);
+}
+
+.site-branding__title-link {
+    display: flex;
+    align-items: center;
+    gap: var(--gutter);
+}
+
+.site-branding__description {
+    white-space: nowrap;
 }
 
 /*--------------------------------------------------------------
@@ -24,8 +38,10 @@
     width: 100%;
 
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    gap: var(--gutter);
 
     padding-top: var(--gutter);
     padding-bottom: var(--gutter);
