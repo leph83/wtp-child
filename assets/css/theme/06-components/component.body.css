@@ -2,17 +2,20 @@
 # BASE LAYOUT
     - checkout what-the-phuc.com for layout ideas
 --------------------------------------------------------------*/
-
 .body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-.header {}
+.header {
+
+}
 
 .main {
     flex-grow: 1;
 }
 
-.footer {}
+.footer {
+
+}

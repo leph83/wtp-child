@@ -2,13 +2,16 @@
 # RESET NAV LIST STYLES
 --------------------------------------------------------------*/
 .nav,
-.nav ul {
+.nav ul,
+.menu,
+.menu ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.nav__link {
+.nav__link,
+.menu-item > a {
   display: block;
   text-decoration: none;
   color: inherit;
@@ -49,9 +52,18 @@
 }
 
 .nav-next {
+  padding-left: var(--gutter);
   margin-left: auto;
 }
 
 .nav-previous {
+  padding-right: var(--gutter);
   margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# NAV INSIDE WIDGET
+--------------------------------------------------------------*/
+.menu-footer-container > ul {
+  display: flex;
 }

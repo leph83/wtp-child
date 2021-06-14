@@ -28,13 +28,11 @@ if (!function_exists('wtp_load_styles_child')) {
         );
 
         // STYLES
-        $css_id = 0;
-        foreach ($css_files as $css_file) {
+        foreach ($css_files as $key => $css_file) {
             $css_version = filemtime(get_stylesheet_directory() . $css_path . $css_file);
 
-            wp_enqueue_style('wtp-child-' . $css_id, get_stylesheet_directory_uri() . $css_path . $css_file, false, $css_version);
-            $css_id++;
+            wp_enqueue_style('wtp-child-' . $key, get_stylesheet_directory_uri() . $css_path . $css_file, false, $css_version);
         }
     }
-    add_action('wp_enqueue_scripts', 'wtp_load_styles_child', 99);
+    add_action('wp_enqueue_scripts', 'wtp_load_styles_child', 100);
 }
