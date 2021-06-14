@@ -12,11 +12,3 @@
 [id] {
   scroll-margin-top: var(--gutter);
 }
-
-/*--------------------------------------------------------------
-# CENTERED CONTENT
---------------------------------------------------------------*/
-.entry-content .alignfull, .entry-content .alignwide, .entry-content>*:not(.alignwide):not(.alignfull) {
-  margin-left: auto;
-  margin-right: auto;
-}

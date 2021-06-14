@@ -6,7 +6,6 @@
   .nav--header {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--gutter);
     align-items: center;
   }
 

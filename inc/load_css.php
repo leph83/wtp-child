@@ -21,10 +21,11 @@ if (!function_exists('wtp_load_styles_child')) {
             '06-components/component.nav.mobile.css',
             '06-components/component.nav.desktop.css',
             
-            '06-components/component.gutenberg.custom.css',
-
+            '06-components/component.sections.css',
             '06-components/component.blocks.css',
             '06-components/component.form.css',
+
+            '06-components/component.gutenberg.custom.css',
         );
 
         // STYLES
