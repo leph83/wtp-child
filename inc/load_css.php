@@ -13,7 +13,7 @@ if (!function_exists('wtp_load_styles_child')) {
             '01-settings/setting.variables.css',
 
             '06-components/component.body.css',
-            '06-components/component.layout.css',
+
             '06-components/component.header.css',
             '06-components/component.footer.css',
 
@@ -23,6 +23,7 @@ if (!function_exists('wtp_load_styles_child')) {
             
             '06-components/component.sections.css',
             '06-components/component.blocks.css',
+            
             '06-components/component.form.css',
 
             '06-components/component.gutenberg.custom.css',
