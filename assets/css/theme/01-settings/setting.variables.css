@@ -17,7 +17,9 @@
 # SPACING
 --------------------------------------------------------------*/
 :root {
+  --gutter: 2.4rem;
   --gutter-outer: var(--gutter);
+  --vertical-rhythm: var(--gutter);
 }
 
 @media (min-width: 768px) {

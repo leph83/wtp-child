@@ -59,3 +59,30 @@
 .nav-previous {
   margin-right: auto;
 }
+
+
+/*--------------------------------------------------------------
+# NAV PREVIOUS & OLDER POSTS
+--------------------------------------------------------------*/
+.nav--prev-next {
+  margin-top: var(--gutter-outer);
+  margin-bottom: var(--gutter-outer);
+}
+
+.nav--prev-next .nav-links {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--gutter);
+}
+
+.nav--prev-next .nav-links a {
+  text-decoration: none;
+  color: inherit;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: calc(var(--gutter) / 2) calc(var(--gutter) / 3 * 2);
+  text-transform: uppercase;
+  font-size: var(--font-size-9);
+  letter-spacing: .1em;
+  font-weight: bold;
+}

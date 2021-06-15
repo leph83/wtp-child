@@ -36,3 +36,81 @@
     background-color: var(--color-black);
     color: var(--color-white);
 }
+
+/*--------------------------------------------------------------
+# CONTENT WIDTH
+- also add default padding for mobile
+--------------------------------------------------------------*/
+.alignfull {
+    max-width: var(--max-width-1);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.alignwide {
+    max-width: var(--max-width-2);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* content without wide or full */
+.entry-content>*:not(.alignwide):not(.alignfull) {
+    max-width: var(--max-width-3);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+  # COMMENTS
+--------------------------------------------------------------*/
+.comments,
+.comment-respond {
+    max-width: var(--max-width-3);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+  # WITHOUT SIDEBAR
+--------------------------------------------------------------*/
+.alignwide,
+.entry-content>*:not(.alignwide):not(.alignfull),
+.comments,
+.comment-respond {
+    padding-left: var(--gutter-outer);
+    padding-right: var(--gutter-outer);
+}
+
+/*--------------------------------------------------------------
+  # WITH ACTIVE SIDEBAR
+  --------------------------------------------------------------*/
+.main--has-sidebar {
+    display: grid;
+    gap: var(--gutter-outer);
+
+    max-width: var(--max-width-3);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-left: var(--gutter-outer);
+    padding-right: var(--gutter-outer);
+}
+
+@media (min-width: 768px) {
+    .main--has-sidebar {
+        grid-template-columns: 1fr auto;
+    }
+}
+
+.sidebar {
+    margin-bottom: var(--gutter-outer);
+}
+
+.main--has-sidebar .alignwide,
+.main--has-sidebar .entry-content>*:not(.alignwide):not(.alignfull),
+.main--has-sidebar .comments,
+.main--has-sidebar .comment-respond {
+    padding-left: 0;
+    padding-right: 0;
+}

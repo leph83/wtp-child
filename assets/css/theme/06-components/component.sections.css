@@ -2,8 +2,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap: var(--gutter);
-    padding-left: var(--gutter-outer);
-    padding-right: var(--gutter-outer);
 }
 
 @media (min-width: 768px) {
@@ -11,4 +9,9 @@
         grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
         gap: var(--gutter-outer);
     }
+}
+
+.main:not(.main--has-sidebar) .section--index .section__content {
+    padding-left: var(--gutter-outer);
+    padding-right: var(--gutter-outer);
 }
