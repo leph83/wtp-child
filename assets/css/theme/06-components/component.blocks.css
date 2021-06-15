@@ -1,6 +1,31 @@
 /*--------------------------------------------------------------
-# BLOCKS
+# BLOCK NONE
 --------------------------------------------------------------*/
-.block--overview {
+.block--none {
+    padding-left: var(--gutter-outer);
+    padding-right: var(--gutter-outer);
+}
 
+/*--------------------------------------------------------------
+# BLOCK INDEX
+--------------------------------------------------------------*/
+.block--index {
+    padding-left: var(--gutter-outer);
+    padding-right: var(--gutter-outer);
+}
+
+/*--------------------------------------------------------------
+# BLOCK PAGE DETAIL
+--------------------------------------------------------------*/
+.block--pagedetail {
+    padding-left: var(--gutter-outer);
+    padding-right: var(--gutter-outer);
+}
+
+/*--------------------------------------------------------------
+# BLOCK POST DETAIL
+--------------------------------------------------------------*/
+.block--postdetail {
+    padding-left: var(--gutter-outer);
+    padding-right: var(--gutter-outer);
 }
