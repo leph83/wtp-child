@@ -23,6 +23,7 @@ if (!function_exists('wtp_load_styles_child')) {
             
             '06-components/component.sections.css',
             '06-components/component.blocks.css',
+            '06-components/component.layout.css',
             
             '06-components/component.form.css',
 

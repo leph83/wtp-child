@@ -23,17 +23,20 @@
     min-height: 100vh;
 }
 
-.header {
-
-}
+.header {}
 
 .main {
     flex-grow: 1;
+    padding-bottom: calc(var(--gutter) * 3);
 }
 
-.footer {
-    background-color: var(--color-black);
-    color: var(--color-white);
+.footer {}
+
+/*--------------------------------------------------------------
+# LINK COLOR
+--------------------------------------------------------------*/
+a {
+    color: var(--color-1);
 }
 
 /*--------------------------------------------------------------
@@ -60,16 +63,6 @@
 }
 
 /*--------------------------------------------------------------
-  # COMMENTS
---------------------------------------------------------------*/
-.comments,
-.comment-respond {
-    max-width: var(--max-width-3);
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/*--------------------------------------------------------------
   # WITHOUT SIDEBAR
 --------------------------------------------------------------*/
 .alignwide,
@@ -82,12 +75,14 @@
 
 /*--------------------------------------------------------------
   # WITH ACTIVE SIDEBAR
-  --------------------------------------------------------------*/
+--------------------------------------------------------------*/
 .main--has-sidebar {
     display: grid;
-    gap: var(--gutter-outer);
+    align-items: flex-start;
+    grid-gap: var(--gutter-outer);
 
-    max-width: var(--max-width-3);
+
+    max-width: calc(var(--max-width-3));
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -96,20 +91,36 @@
     padding-right: var(--gutter-outer);
 }
 
+.main--has-sidebar>* {
+    --max-width-1: initial;
+    --max-width-2: initial;
+    --max-width-3: initial;
+    --gutter-outer: initial;
+}
+
 @media (min-width: 768px) {
     .main--has-sidebar {
         grid-template-columns: 1fr auto;
     }
 }
 
+/*--------------------------------------------------------------
+  # SIDEBAR
+--------------------------------------------------------------*/
 .sidebar {
     margin-bottom: var(--gutter-outer);
+    background-color: var(--color-1);
+    color: var(--color-white);
+    padding: calc(var(--gutter));
+
 }
 
-.main--has-sidebar .alignwide,
-.main--has-sidebar .entry-content>*:not(.alignwide):not(.alignfull),
-.main--has-sidebar .comments,
-.main--has-sidebar .comment-respond {
-    padding-left: 0;
-    padding-right: 0;
+@media (min-width: 768px) {
+    .sidebar {
+        margin-right: var(--gutter-outer);
+    }
+}
+
+.sidebar a {
+    color: inherit;
 }

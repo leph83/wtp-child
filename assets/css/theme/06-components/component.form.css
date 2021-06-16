@@ -12,7 +12,8 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"] {
-
+	width: 100%;
+	padding: .5em 1em;
 }
 
 input[type="text"]:focus,
@@ -29,7 +30,7 @@ input[type="time"]:focus,
 input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus {
-
+	
 }
 
 input[type="text"]:disabled,
@@ -64,7 +65,7 @@ textarea {
 }
 
 label {
-
+	display: block;
 }
 
 input[type="checkbox"] + label,

@@ -14,12 +14,10 @@
   }
 
   .nav--header .nav__link {
-    padding-left: calc(var(--gutter) / 2);
-    padding-right: calc(var(--gutter) / 2);
-    padding-top: calc(var(--gutter) / 2);
-    padding-bottom: calc(var(--gutter) / 2);
+    padding: .5em .5em;
   }
 
+  .current_page_parent > .nav__link, 
   .nav--header .nav__link--active {
     color: var(--color-1);
   }
@@ -36,7 +34,8 @@
   .nav--header .nav--sub {
     display: none;
     position: absolute;
-    background-color: var(--color-black);
+    background-color: var(--color-white);
+    border: 1px solid;
   }
 
   .nav--header>.nav__item:hover>.nav--sub,
