@@ -18,10 +18,12 @@
     font-size: var(--font-size-7);
 }
 
+.site-branding__title {
+    display: block;
+}
+
 .site-branding__title-link {
-    display: flex;
-    align-items: center;
-    gap: var(--gutter);
+
 }
 
 .site-branding__description {
