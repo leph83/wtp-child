@@ -63,29 +63,13 @@ if (!function_exists('wtp_child_register_block_styles')) {
 	function wtp_child_register_block_styles()
 	{
 		// Spacer Default
-		register_block_style(
-			'core/spacer',
-			array(
-				'name'  => 'single',
-				'label' => esc_html__('single', 'wtp-child'),
-			)
-		);
-
-		register_block_style(
-			'core/spacer',
-			array(
-				'name'  => 'double',
-				'label' => esc_html__('double', 'wtp-child'),
-			)
-		);
-
-		register_block_style(
-			'core/spacer',
-			array(
-				'name'  => 'tripple',
-				'label' => esc_html__('tripple', 'wtp-child'),
-			)
-		);
+		// register_block_style(
+		// 	'core/spacer',
+		// 	array(
+		// 		'name'  => 'single',
+		// 		'label' => esc_html__('single', 'wtp-child'),
+		// 	)
+		// );
 	}
 
 	add_action('init', 'wtp_child_register_block_styles');
