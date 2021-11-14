@@ -24,6 +24,6 @@
 
 @media (min-width: 768px) {
   :root {
-    --gutter-outer: calc(var(--gutter) * 2);
+    --gutter-outer: calc(var(--gutter) * 1);
   } 
 }
