@@ -1,57 +1,63 @@
 /*--------------------------------------------------------------
   # BLOCK GALLERY
     is-style-responsive
-  --------------------------------------------------------------*/  
-  .is-style-responsive .blocks-gallery-grid {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--gutter);
-  }
-  
-  .is-style-responsive .blocks-gallery-item {
-    flex-grow: 1;
-    flex-basis: calc((var(--containerquery) - 100%) * 999);
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    margin-top: 0;
-  }
-  
-  /* COLUMNS */
-  
-  .is-style-responsive.columns-2 .blocks-gallery-item {
-    min-width: calc(100% / 2 - var(--gutter));
-  }
-  
-  .is-style-responsive.columns-3 .blocks-gallery-item {
-    min-width: calc(100% / 3 - var(--gutter));
-  }
-  
-  .is-style-responsive.columns-4 .blocks-gallery-item {
-    min-width: calc(100% / 4 - var(--gutter));
-  }
-  
-  .is-style-responsive.columns-5 .blocks-gallery-item {
-    min-width: calc(100% / 5 - var(--gutter));
-  }
-  
-  .is-style-responsive.columns-6 .blocks-gallery-item {
-    min-width: calc(100% / 6 - var(--gutter));
-  }
-  
-  .is-style-responsive.columns-7 .blocks-gallery-item {
-    min-width: calc(100% / 7 - var(--gutter));
-  }
-  
-  .is-style-responsive.columns-8 .blocks-gallery-item {
-    min-width: calc(100% / 8 - var(--gutter));
-  }
-  
-
-  /*--------------------------------------------------------------
-  # HEADING
 --------------------------------------------------------------*/
+.is-style-responsive .blocks-gallery-grid {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gutter);
+}
 
+.is-style-responsive .blocks-gallery-item {
+  flex-grow: 1;
+  flex-basis: calc((var(--containerquery) - 100%) * 999);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 0;
+}
+
+/* COLUMNS */
+.is-style-responsive.columns-2 .blocks-gallery-item {
+  min-width: calc(100% / 2 - var(--gutter));
+}
+
+.is-style-responsive.columns-3 .blocks-gallery-item {
+  min-width: calc(100% / 3 - var(--gutter));
+}
+
+.is-style-responsive.columns-4 .blocks-gallery-item {
+  min-width: calc(100% / 4 - var(--gutter));
+}
+
+.is-style-responsive.columns-5 .blocks-gallery-item {
+  min-width: calc(100% / 5 - var(--gutter));
+}
+
+.is-style-responsive.columns-6 .blocks-gallery-item {
+  min-width: calc(100% / 6 - var(--gutter));
+}
+
+.is-style-responsive.columns-7 .blocks-gallery-item {
+  min-width: calc(100% / 7 - var(--gutter));
+}
+
+.is-style-responsive.columns-8 .blocks-gallery-item {
+  min-width: calc(100% / 8 - var(--gutter));
+}
+
+
+/*--------------------------------------------------------------
+  # DEFAULTS
+--------------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+  margin-top: calc(var(--gutter) * 2);
+  margin-bottom: calc(var(--gutter) * 1);
+}
+
+.entry-content ul:not([class]) li {
+  margin-left: var(--gutter);
+}
