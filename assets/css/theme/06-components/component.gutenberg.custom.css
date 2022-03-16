@@ -61,3 +61,21 @@ h1, h2, h3, h4, h5, h6 {
 .entry-content ul:not([class]) li {
   margin-left: var(--gutter);
 }
+
+/*--------------------------------------------------------------
+  # SPACER
+--------------------------------------------------------------*/
+.wp-block-spacer.is-style-single {
+  height: initial !important;
+  min-height: calc(var(--gutter) * 1);
+}
+
+.wp-block-spacer.is-style-double {
+  height: initial !important;
+  min-height: calc(var(--gutter) * 2);
+}
+
+.wp-block-spacer.is-style-tripple {
+  height: initial !important;
+  min-height: calc(var(--gutter) * 3);
+}
