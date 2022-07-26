@@ -30,12 +30,17 @@
 # BLOCK PAGE DETAIL
 --------------------------------------------------------------*/
 .block--pagedetail {
-    padding-left: var(--gutter-outer);
-    padding-right: var(--gutter-outer);
-
     max-width: var(--max-width-3);
     margin-left: auto;
     margin-right: auto;
+}
+
+.block--pagedetail .block__content {
+    margin-left: calc(var(--gutter-outer) * -1);
+    margin-right: calc(var(--gutter-outer) * -1);
+
+    padding-left: var(--gutter-outer);
+    padding-right: var(--gutter-outer);
 }
 
 /*--------------------------------------------------------------

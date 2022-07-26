@@ -19,11 +19,12 @@
 :root {
   --gutter: 2.4rem;
   --gutter-outer: var(--gutter);
-  --vertical-rhythm: var(--gutter);
+  --vertical-rhythm: calc(var(--gutter) * 2);
 }
 
 @media (min-width: 768px) {
   :root {
-    --gutter-outer: calc(var(--gutter) * 1);
+    --gutter-outer: calc(var(--gutter) * 3);
+    --vertical-rhythm: calc(var(--gutter) * 3);
   } 
 }

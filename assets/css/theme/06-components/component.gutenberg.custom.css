@@ -1,4 +1,113 @@
 /*--------------------------------------------------------------
+# VERTICAL RHYTHM
+--------------------------------------------------------------*/
+:where(.entry-content > * + *) {
+  margin-top: var(--vertical-rhythm, var(--gutter));
+}
+
+/*--------------------------------------------------------------
+# CONTENT WIDTH
+--------------------------------------------------------------*/
+.entry-content .alignfull,
+.entry-content .alignwide,
+.entry-content > *:not(.alignwide):not(.alignfull) {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .35);
+}
+
+.entry-content .alignfull {
+  max-width: var(--max-width-1);
+}
+
+.entry-content .alignwide {
+  max-width: var(--max-width-2);
+}
+
+.entry-content>*:not(.alignwide):not(.alignfull) {
+  max-width: var(--max-width-3);
+}
+
+.entry-content .alignfull {
+  width: calc(100% + var(--gutter-outer) * 2);
+  max-width: calc(var(--max-width-1) + var(--gutter-outer) * 2);
+  margin-left: calc(-1 * var(--gutter-outer));
+  margin-right: calc(-1 * var(--gutter-outer));
+}
+
+/*--------------------------------------------------------------
+# GROUP
+--------------------------------------------------------------*/
+.wp-block-group.alignfull,
+.wp-block-group.has-background {
+  padding-left: var(--gutter-outer);
+  padding-right: var(--gutter-outer);
+}
+
+/*--------------------------------------------------------------
+  # DEFAULTS
+--------------------------------------------------------------*/
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6 {
+  margin-top: calc(var(--gutter) * 2);
+  margin-bottom: calc(var(--gutter) * 1);
+}
+
+.entry-content ul:not([class]) li {
+  margin-left: var(--gutter);
+}
+
+.entry-content p {
+  margin-top: var(--gutter);
+  margin-bottom: var(--gutter);
+}
+
+/*--------------------------------------------------------------
+  # SPACER
+--------------------------------------------------------------*/
+.wp-block-spacer.is-style-single {
+  height: initial !important;
+  min-height: calc(var(--gutter) * 1);
+}
+
+.wp-block-spacer.is-style-double {
+  height: initial !important;
+  min-height: calc(var(--gutter) * 2);
+}
+
+.wp-block-spacer.is-style-tripple {
+  height: initial !important;
+  min-height: calc(var(--gutter) * 3);
+}
+
+/*--------------------------------------------------------------
+  # MEDIA TEXT
+--------------------------------------------------------------*/
+.wp-block-media-text .wp-block-media-text__content {
+  padding: initial;
+}
+
+.alignfull .wp-block-media-text__content {
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+@media (min-width: 600px) {
+  .wp-block-media-text:not(.has-media-on-the-right) .wp-block-media-text__content {
+    padding-left: var(--gutter);
+  }
+
+  .has-media-on-the-right.wp-block-media-text .wp-block-media-text__content {
+    padding-right: var(--gutter);
+  }
+}
+
+/*--------------------------------------------------------------
   # BLOCK GALLERY
     is-style-responsive
 --------------------------------------------------------------*/
@@ -47,35 +156,4 @@
 
 .is-style-responsive.columns-8 .blocks-gallery-item {
   min-width: calc(100% / 8 - var(--gutter));
-}
-
-
-/*--------------------------------------------------------------
-  # DEFAULTS
---------------------------------------------------------------*/
-h1, h2, h3, h4, h5, h6 {
-  margin-top: calc(var(--gutter) * 2);
-  margin-bottom: calc(var(--gutter) * 1);
-}
-
-.entry-content ul:not([class]) li {
-  margin-left: var(--gutter);
-}
-
-/*--------------------------------------------------------------
-  # SPACER
---------------------------------------------------------------*/
-.wp-block-spacer.is-style-single {
-  height: initial !important;
-  min-height: calc(var(--gutter) * 1);
-}
-
-.wp-block-spacer.is-style-double {
-  height: initial !important;
-  min-height: calc(var(--gutter) * 2);
-}
-
-.wp-block-spacer.is-style-tripple {
-  height: initial !important;
-  min-height: calc(var(--gutter) * 3);
 }
